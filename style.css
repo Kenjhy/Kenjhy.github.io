@@ -143,10 +143,10 @@ header {
 }
 
 .canvas-bars {
-  flex: 1; /* Ajusta la flexibilidad para que la barra ocupe más espacio */
+  flex: 0; /* Ajusta la flexibilidad para que la barra ocupe más espacio */
   max-width: 150px; /* o el ancho máximo que prefieras */
   height: 10px;
-  flex-grow: 10; /* Evita que la barra crezca */
+  flex-grow: 100; /* Evita que la barra crezca */
 }
 
 .bar-separation span {
