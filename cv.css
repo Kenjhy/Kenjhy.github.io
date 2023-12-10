@@ -1,0 +1,124 @@
+/* --------------------- General styles --------------------- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f2f2f2;
+}
+
+#cv-container {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#left-side, #right-side {
+  padding: 20px; /* Agrega un padding para separar los contenidos de los bordes */
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color:white; /* Cambia el color según tus preferencias */
+  margin: 0px 0; /* Espaciado antes y después de la línea */
+}
+/* --------------------- Left styles --------------------- */
+#left-side {
+  width: 65%;
+  padding-right: 10px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.left-side-column {
+  flex: 1; /* Establece la flexibilidad de las left-side-columns internas a 1 para que ocupen el mismo espacio */
+}
+
+.left-side-column:nth-child(1) { /* left-side-column de la foto de perfil */
+  flex: 0.1; /* Asigna menos espacio a la left-side-column de la foto 30%*/
+}
+
+.left-side-column:nth-child(2) { /* left-side-column de la información personal */
+  flex: 0.9; /* Asigna más espacio a la left-side-column de la información personal 70%*/
+}
+
+#profile-picture {
+  width: 150px;
+  height: 150px; /* Mantén el mismo valor que el ancho para un círculo perfecto */
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 6%;
+  background-color: black;
+  position: relative; /* Posición relativa para posicionar la imagen absolutamente dentro */
+  border: 4px solid #f2f2f2; /* Borde exterior, ajusta el color según tus preferencias */
+  box-shadow: 0 0 0 1px black; /* Sombra de caja para crear el segundo círculo, ajusta el color y el tamaño según tus preferencias */
+}
+
+#profile-picture img {
+  width: 100%; /* Esto asegura que la imagen ocupe todo el ancho del contenedor */
+  height: 90%; /* Esto asegura que la imagen llene completamente el contenedor */
+  display: block; /* Asegura que la imagen no tenga espacio extra debajo */
+  object-fit: cover; /* Esto cortará la imagen para que se ajuste al contenedor sin distorsionarse */
+  position: absolute; /* Posición absoluta respecto al contenedor */
+  margin-top: 5%;
+}
+
+#personal-information {
+  text-align: center; /* Centra el texto horizontalmente */
+  display: flex;
+  flex-direction: column; /* Alinea los elementos en una left-side-column */
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Alinea los elementos horizontalmente en el centro */
+  /* Mantén cualquier otro estilo que ya tengas para #personal-information */
+}
+
+#personal-information h2 {
+  line-height: 1; /* Ajusta este valor según tus preferencias */
+  margin-bottom: 10px; /* Ajusta el margen inferior para controlar el espacio entre los elementos h1, h2, y h3 */
+}
+
+#personal-information h3 {
+  line-height: 1; /* Ajusta este valor según tus preferencias */
+  margin-bottom: 0px; /* Ajusta el margen inferior para controlar el espacio entre los elementos h1, h2, y h3 */
+}
+
+#personal-information h5 {
+  line-height: 0; /* Ajusta este valor según tus preferencias */
+  margin-bottom: 0px; /* Ajusta el margen inferior para controlar el espacio entre los elementos h1, h2, y h3 */
+  color: rgb(64, 64, 64);
+}
+/* --------------------- Right styles --------------------- */
+#right-side {
+  width: 35%;
+  padding-left: 10px;
+  background-color: rgb(64, 64, 64); /* Gris oscuro */
+  color: white; /* Cambiar el color del texto a blanco para mayor legibilidad */
+  font-size: 14px; /* Adjust the font size as needed */
+}
+
+#right-side #contact p {
+  line-height: 0.8; /* Adjust the line height as needed */
+  margin-bottom: 1px; /* Adjust the space between paragraphs */
+}
+
+#contact i {
+  margin-right: 10px; /* Spacing between icon and text */
+  color: lightskyblue; /* Icon color */
+  /* You can add other styles like font-size, etc. */
+}
+
+.clear-link {
+  color: #4191e6; /* Un tono de azul claro, ajusta según tus preferencias */
+  text-decoration: none; /* Opcional, para eliminar el subrayado de los enlaces */
+}
+
+#right-side h2 {
+  margin-bottom: 10px; /* Reduce el margen inferior del título */
+}
