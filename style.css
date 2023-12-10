@@ -142,8 +142,6 @@ header {
 
 .canvas-bars {
   flex: 1; /* Ajusta la flexibilidad para que la barra ocupe más espacio */
-  width: 100px;
-  height: 10px;
 }
 
 .bar-separation span {

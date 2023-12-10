@@ -35,8 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
 function drawSkillBar(canvasId, skillLevel) {
   const canvas = document.getElementById(canvasId);
   const ctx = canvas.getContext('2d');
-  const width = canvas.offsetWidth; // Usa el ancho real del canvas
-  const height = canvas.offsetHeight; // Usa la altura real del canvas
+  const width = 100; // Usa el ancho real del canvas
+  const height = 8; // Usa la altura real del canvas
 
   // Redefine las dimensiones internas del canvas
   canvas.width = width;
