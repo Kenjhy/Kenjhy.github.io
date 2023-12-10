@@ -134,14 +134,19 @@ header {
 }
 
 .bar-separation {
-  margin-bottom: 0px;
+  margin-bottom: 1px;
   margin-top: 1px;
   display: flex;
-  align-items: center; /* Alinea verticalmente el texto y la barra */
+  justify-content: flex-start; /* Alinea el contenido al inicio */
+  align-items: flex-start; /* Alinea verticalmente el texto y la barra */
+  gap: 10px; /* Espacio entre el texto y la barra */
 }
 
 .canvas-bars {
   flex: 1; /* Ajusta la flexibilidad para que la barra ocupe más espacio */
+  max-width: 150px; /* o el ancho máximo que prefieras */
+  height: 10px;
+
 }
 
 .bar-separation span {
