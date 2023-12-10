@@ -9,6 +9,6 @@
 
 - If you want to clone it you can test the HTML on a local server. You can use tools like Live Server in Visual Studio Code.
 
-- You can also visit the website where the CV is Deployed, created with: https://pages.github.com/
+- You can also visit the website at https://kenjhy.github.io/ where the CV is Deployed, created with: https://pages.github.com/
 
 - For the design of the icons I used: https://fontawesome.com/icons
