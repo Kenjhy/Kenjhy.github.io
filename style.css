@@ -137,21 +137,16 @@ header {
   margin-bottom: 1px;
   margin-top: 1px;
   display: flex;
-  justify-content: flex-start; /* Alinea el contenido al inicio */
-  align-items: center; /* Alinea verticalmente el texto y la barra */
-  gap: 10px; /* Espacio entre el texto y la barra */
+  gap: 1px; /* Espacio entre el texto y la barra */
 }
 
 .canvas-bars {
-  flex: 0; /* Ajusta la flexibilidad para que la barra ocupe más espacio */
-  max-width: 150px; /* o el ancho máximo que prefieras */
+  max-width: 100px; /* o el ancho máximo que prefieras */
   height: 10px;
-  flex-grow: 100; /* Evita que la barra crezca */
 }
 
 .bar-separation span {
   flex: 1; /* Ajusta la flexibilidad para que el texto ocupe el espacio necesario */
-  margin-right: 10px; /* Espacio entre el texto y la barra */
 }
 
 section {
