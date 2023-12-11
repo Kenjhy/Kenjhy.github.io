@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
   drawSkillBar('mavenSkill', 85); // 90% para español
   drawSkillBar('gradleSkill', 85); // 90% para español
   drawSkillBar('nodejsSkill', 70); // 90% para español
-  drawSkillBar('cloudSkill', 55); // 90% para español
+  drawSkillBar('cloudSkill', 45); // 90% para español
 
   drawSkillBar('angularSkill', 75); // 90% para español
   drawSkillBar('reactSkill', 30); // 90% para español

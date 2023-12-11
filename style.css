@@ -17,83 +17,145 @@ body {
 
 #left-side, #right-side {
   padding: 10px; /* Agrega un padding para separar los contenidos de los bordes */
+  font-size: 13px;
 }
 
-hr {
-  border: none;
-  height: 1px;
-  background-color:white; /* Cambia el color según tus preferencias */
-  margin: 0px 0; /* Espaciado antes y después de la línea */
-}
 /* --------------------- Left styles --------------------- */
 #left-side {
   width: 65%;
   padding-right: 10px;
 }
+  #left-side hr {
+    border: none;
+    height: 1px;
+    background-color: black; /* Color negro para la línea en el lado izquierdo */
+    margin: 0px 0; /* Espaciado antes y después de la línea */
+  }
 
-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
+  header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
 
-.left-side-column {
-  flex: 1; /* Establece la flexibilidad de las left-side-columns internas a 1 para que ocupen el mismo espacio */
-}
+    .left-side-column {
+      flex: 1; /* Establece la flexibilidad de las left-side-columns internas a 1 para que ocupen el mismo espacio */
+    }
 
-.left-side-column:nth-child(1) { /* left-side-column de la foto de perfil */
-  flex: 0.1; /* Asigna menos espacio a la left-side-column de la foto 30%*/
-}
+    .left-side-column:nth-child(1) { /* left-side-column de la foto de perfil */
+      flex: 0.1; /* Asigna menos espacio a la left-side-column de la foto 30%*/
+    }
 
-.left-side-column:nth-child(2) { /* left-side-column de la información personal */
-  flex: 0.9; /* Asigna más espacio a la left-side-column de la información personal 70%*/
-}
+    .left-side-column:nth-child(2) { /* left-side-column de la información personal */
+      flex: 0.9; /* Asigna más espacio a la left-side-column de la información personal 70%*/
+    }
 
-#profile-picture {
-  width: 150px;
-  height: 150px; /* Mantén el mismo valor que el ancho para un círculo perfecto */
-  border-radius: 50%;
-  overflow: hidden;
-  margin-right: 6%;
-  background-color: black;
-  position: relative; /* Posición relativa para posicionar la imagen absolutamente dentro */
-  border: 4px solid #f2f2f2; /* Borde exterior, ajusta el color según tus preferencias */
-  box-shadow: 0 0 0 1px black; /* Sombra de caja para crear el segundo círculo, ajusta el color y el tamaño según tus preferencias */
-}
+      #profile-picture {
+        width: 150px;
+        height: 150px; /* Mantén el mismo valor que el ancho para un círculo perfecto */
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 6%;
+        background-color: black;
+        position: relative; /* Posición relativa para posicionar la imagen absolutamente dentro */
+        border: 4px solid #f2f2f2; /* Borde exterior, ajusta el color según tus preferencias */
+        box-shadow: 0 0 0 1px black; /* Sombra de caja para crear el segundo círculo, ajusta el color y el tamaño según tus preferencias */
+      }
 
-#profile-picture img {
-  width: 100%; /* Esto asegura que la imagen ocupe todo el ancho del contenedor */
-  height: 90%; /* Esto asegura que la imagen llene completamente el contenedor */
-  display: block; /* Asegura que la imagen no tenga espacio extra debajo */
-  object-fit: cover; /* Esto cortará la imagen para que se ajuste al contenedor sin distorsionarse */
-  position: absolute; /* Posición absoluta respecto al contenedor */
-  margin-top: 5%;
-}
+        #profile-picture img {
+          width: 100%; /* Esto asegura que la imagen ocupe todo el ancho del contenedor */
+          height: 90%; /* Esto asegura que la imagen llene completamente el contenedor */
+          display: block; /* Asegura que la imagen no tenga espacio extra debajo */
+          object-fit: cover; /* Esto cortará la imagen para que se ajuste al contenedor sin distorsionarse */
+          position: absolute; /* Posición absoluta respecto al contenedor */
+          margin-top: 5%;
+        }
 
-#personal-information {
-  text-align: center; /* Centra el texto horizontalmente */
-  display: flex;
-  flex-direction: column; /* Alinea los elementos en una left-side-column */
-  justify-content: center; /* Centra el contenido verticalmente */
-  align-items: center; /* Alinea los elementos horizontalmente en el centro */
-  /* Mantén cualquier otro estilo que ya tengas para #personal-information */
-}
+      #personal-information {
+        text-align: center; /* Centra el texto horizontalmente */
+        display: flex;
+        flex-direction: column; /* Alinea los elementos en una left-side-column */
+        justify-content: center; /* Centra el contenido verticalmente */
+        align-items: center; /* Alinea los elementos horizontalmente en el centro */
+        /* Mantén cualquier otro estilo que ya tengas para #personal-information */
+      }
 
-#personal-information h2 {
-  line-height: 1; /* Ajusta este valor según tus preferencias */
-  margin-bottom: 10px; /* Ajusta el margen inferior para controlar el espacio entre los elementos h1, h2, y h3 */
-}
+        #personal-information h2 {
+          line-height: 1; /* Ajusta este valor según tus preferencias */
+          margin-bottom: 10px; /* Ajusta el margen inferior para controlar el espacio entre los elementos h1, h2, y h3 */
+        }
 
-#personal-information h3 {
-  line-height: 1; /* Ajusta este valor según tus preferencias */
-  margin-bottom: 0px; /* Ajusta el margen inferior para controlar el espacio entre los elementos h1, h2, y h3 */
-}
+        #personal-information h3 {
+          line-height: 1; /* Ajusta este valor según tus preferencias */
+          margin-bottom: 0px; /* Ajusta el margen inferior para controlar el espacio entre los elementos h1, h2, y h3 */
+        }
 
-#personal-information h5 {
-  line-height: 0; /* Ajusta este valor según tus preferencias */
-  margin-bottom: 0px; /* Ajusta el margen inferior para controlar el espacio entre los elementos h1, h2, y h3 */
-  color: rgb(64, 64, 64);
-}
+        #personal-information h5 {
+          line-height: 0; /* Ajusta este valor según tus preferencias */
+          margin-bottom: 0px; /* Ajusta el margen inferior para controlar el espacio entre los elementos h1, h2, y h3 */
+          color: rgb(64, 64, 64);
+        }
+        
+  .education-container {
+    margin-top: 0px;
+    margin-left: 1px; /* Espacio para la línea y los iconos */
+    margin-right: -3px; /* Espacio para la línea y los iconos */
+    position: relative; /* Para posicionar la línea y los iconos */
+  }
+  
+    .education-entry {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: -5px; /* Space between entries */
+    }
+  
+      .education-column {
+        padding: 5px;
+      }
+      
+      .education-column p {
+        margin: 5px 0;
+      }
+  
+      .education-left {
+        flex: 0 0 30%; /* 30% width for the left column */
+      }
+      
+      .education-right {
+        flex: 0 0 70%; /* 70% width for the right column */
+      }
+
+  .timeline-container {
+    position: absolute;
+    left: 7px; /* Ajusta esta posición para alinear con el margen izquierdo de tu contenido */
+    top: 235px; /* Ajusta para alinear con el inicio de la sección de educación */
+    height: 100px; /* Ajusta según la altura total de tus entradas de educación */
+    width: 2px; /* Grosor de la línea */
+    background-color: black; /* Color de la línea */
+  }
+  
+  .timeline-icon {
+    width: 10px; /* Tamaño del icono */
+    height: 10px; /* Tamaño del icono */
+    border-radius: 50%; /* Hace que sea circular */
+    background-color: black; /* Color del icono */
+    position: absolute;
+    left: -4px; /* Centra el icono sobre la línea */
+    top: 0px; /* Ajusta para cada entrada de educación */
+  }
+  
+  /* Primer icono */
+  .timeline-container div:nth-child(1) {
+    top: 0px; /* Ajusta según la posición del primer institution name */
+  }
+  
+  /* Segundo icono */
+  .timeline-container div:nth-child(2) {
+    top: 70px; /* Ajusta según la posición del segundo institution name */
+  }
+  
+
+
 /* --------------------- Right styles --------------------- */
 #right-side {
   width: 35%;
@@ -103,63 +165,82 @@ header {
   font-size: 13px; /* Adjust the font size as needed */
 }
 
-#right-side #contact p {
-  line-height: 0.8; /* Adjust the line height as needed */
-  margin-bottom: 1px; /* Adjust the space between paragraphs */
-}
+  #right-side hr {
+    border: none;
+    height: 1px;
+    background-color:white; /* Cambia el color según tus preferencias */
+    margin: 0px 0; /* Espaciado antes y después de la línea */
+  }
 
-#contact i {
-  margin-right: 10px; /* Spacing between icon and text */
-  color: lightskyblue; /* Icon color */
-  /* You can add other styles like font-size, etc. */
-}
+  #right-side #contact p {
+    line-height: 0.8; /* Adjust the line height as needed */
+    margin-bottom: 1px; /* Adjust the space between paragraphs */
+  }
 
-.clear-link {
-  color: #4191e6; /* Un tono de azul claro, ajusta según tus preferencias */
-  text-decoration: none; /* Opcional, para eliminar el subrayado de los enlaces */
-}
+  #right-side span {
+    font-size: 13px; /* Change this value to your desired font size */
+  }
 
-#right-side h2 {
-  margin-bottom: 10px; /* Reduce el margen inferior del título */
-}
+  #contact i {
+    margin-right: 10px; /* Spacing between icon and text */
+    color: lightskyblue; /* Icon color */
+    /* You can add other styles like font-size, etc. */
+  }
 
-#right-side h3 {
-  margin-bottom: 10px; /* Reduce el margen inferior del título */
-  margin-top: 20px; /* Reduce el margen inferior del título */
-  text-align: center; /* Centers the text of h3 elements */
-}
+    .clear-link {
+      color: #4191e6; /* Un tono de azul claro, ajusta según tus preferencias */
+      text-decoration: none; /* Opcional, para eliminar el subrayado de los enlaces */
+    }
 
-#profile p {
-  text-align: justify;
-}
+  #right-side h2 {
+    margin-bottom: 10px; /* Reduce el margen inferior del título */
+  }
 
-.bar-separation {
-  margin-bottom: 1px;
-  margin-top: 1px;
-  display: flex;
-  gap: 1px; /* Espacio entre el texto y la barra */
-}
+  #right-side h3 {
+    margin-bottom: 10px; /* Reduce el margen inferior del título */
+    margin-top: 20px; /* Reduce el margen inferior del título */
+    text-align: center; /* Centers the text of h3 elements */
+  }
 
-.canvas-bars {
-  max-width: 100px; /* o el ancho máximo que prefieras */
-  height: 10px;
-}
+  #profile p {
+    text-align: justify;
+  }
 
-.bar-separation span {
-  flex: 1; /* Ajusta la flexibilidad para que el texto ocupe el espacio necesario */
-}
+  section {
+    margin-bottom: 25px;
+    page-break-inside: avoid; /* Evita que el contenido de la sección se divida entre páginas */
+    page-break-before: avoid;
+    page-break-after: avoid;
+  }
 
-section {
-  margin-bottom: 25px;
-}
+    .section-container {
+      margin-top: 10px;
+    }
 
-.bars-container {
-  margin-top: 10px;
-}
+      .bar-separation {
+        margin-bottom: 1px;
+        margin-top: 1px;
+        display: flex;
+        align-items: center; /* Alinea verticalmente el texto y la barra */
+        gap: 1px; /* Espacio entre el texto y la barra */
+      }
+
+        .canvas-bars {
+          max-width: 100px; /* o el ancho máximo que prefieras */
+          height: 10px;
+        }
+
+        .bar-separation span {
+          flex: 1; /* Ajusta la flexibilidad para que el texto ocupe el espacio necesario */
+        }
 
 
-section {
-  page-break-inside: avoid; /* Evita que el contenido de la sección se divida entre páginas */
-  page-break-before: avoid;
-  page-break-after: avoid;
-}
+  #without-bar-container p {
+    margin-top: 0px; /* Reduce el espacio superior */
+    margin-bottom: 0px; /* Reduce el espacio inferior */
+    font-size: 13px;
+  }
+
+    #tools {
+      text-align: center; /* Centra todo el contenido de la sección tools */
+    }
