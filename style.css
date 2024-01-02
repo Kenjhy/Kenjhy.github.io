@@ -25,6 +25,12 @@ body {
   width: 65%;
   padding-right: 10px;
 }
+
+  #left-side h3 {
+    margin-bottom: 6px; /* Reduce el margen inferior del título */
+    margin-top: 10px; /* Reduce el margen inferior del título */
+  }
+  
   #left-side hr {
     border: none;
     height: 1px;
@@ -56,7 +62,7 @@ body {
         border-radius: 50%;
         overflow: hidden;
         margin-right: 6%;
-        background-color: black;
+        background-color: rgb(0, 0, 0);
         position: relative; /* Posición relativa para posicionar la imagen absolutamente dentro */
         border: 4px solid #f2f2f2; /* Borde exterior, ajusta el color según tus preferencias */
         box-shadow: 0 0 0 1px black; /* Sombra de caja para crear el segundo círculo, ajusta el color y el tamaño según tus preferencias */
@@ -125,11 +131,53 @@ body {
         flex: 0 0 70%; /* 70% width for the right column */
       }
 
+    .job-container {
+      margin-top: 0px;
+      margin-left: 1px; /* Espacio para la línea y los iconos */
+      margin-right: -3px; /* Espacio para la línea y los iconos */
+      position: relative; /* Para posicionar la línea y los iconos */
+    }
+    
+      .job-entry {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: -5px; /* Space between entries */
+      }
+    
+        .job-column {
+          padding: 5px;
+        }
+        
+        .job-column p {
+          margin: 5px 0;
+        }
+    
+        .job-left {
+          flex: 0 0 25%; /* 30% width for the left column */
+        }
+        
+        .job-right {
+          flex: 0 0 75%; /* 70% width for the right column */
+        }
+
+        .job-full-width {
+          width: 100%; /* Ocupa todo el ancho disponible */
+          padding: 0px 5px; /* Ajusta el acolchado según sea necesario */
+          margin-top: -18px; /* Ajusta el acolchado según sea necesario */
+        }
+
+                /* Estilo para los párrafos en #profile y #Job con menos espaciado de línea */
+        #Job .job-full-width p {
+          line-height: 1; /* Puedes ajustar este valor según tus necesidades */
+        }
+
+
+
   .timeline-container {
     position: absolute;
     left: 7px; /* Ajusta esta posición para alinear con el margen izquierdo de tu contenido */
-    top: 235px; /* Ajusta para alinear con el inicio de la sección de educación */
-    height: 100px; /* Ajusta según la altura total de tus entradas de educación */
+    top: 225px; /* Ajusta para alinear con el inicio de la sección de educación */
+    height: 420px; /* Ajusta según la altura total de tus entradas de educación */
     width: 2px; /* Grosor de la línea */
     background-color: black; /* Color de la línea */
   }
@@ -151,7 +199,7 @@ body {
   
   /* Segundo icono */
   .timeline-container div:nth-child(2) {
-    top: 70px; /* Ajusta según la posición del segundo institution name */
+    top: 415px; /* Ajusta según la posición del segundo institution name */
   }
   
 
@@ -197,8 +245,8 @@ body {
   }
 
   #right-side h3 {
-    margin-bottom: 10px; /* Reduce el margen inferior del título */
-    margin-top: 20px; /* Reduce el margen inferior del título */
+    margin-bottom: 5px; /* Reduce el margen inferior del título */
+    margin-top: 5px; /* Reduce el margen inferior del título */
     text-align: center; /* Centers the text of h3 elements */
   }
 
@@ -207,7 +255,7 @@ body {
   }
 
   section {
-    margin-bottom: 25px;
+    margin-bottom: 26px;
     page-break-inside: avoid; /* Evita que el contenido de la sección se divida entre páginas */
     page-break-before: avoid;
     page-break-after: avoid;

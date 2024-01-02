@@ -20,14 +20,41 @@ document.getElementById('download').addEventListener('click', () => {
   html2pdf().from(document.body).set(opt).save();
 });
 
+let currentLanguage = 'en'; // Idioma predeterminado
+
+function changeLanguage(lang) {
+  currentLanguage = lang;
+  loadContent();
+}
+
+// Función para cargar y mostrar el contenido
+function loadContent() {
+  // Cargar y mostrar el perfil
+  fetch('content.json') //Ir a buscar o traer
+    .then(response => response.json())
+    .then(data => {
+      const languageData  = data[currentLanguage];
+      let profileText = languageData.profileDescription.replace(/\n/g, '<br>');  
+      document.querySelector('#profile p').innerHTML = profileText;
+
+      // Cargar y mostrar la experiencia de trabajo de softwareOne
+      let firstJobText = languageData.workExperience.softwareOne
+        .replace(/\n/g, '<br>') // Primero reemplaza los saltos de línea por <br>
+        .replace(/-/g, ' ● ');  // Luego reemplaza los guiones por puntos grandes
+      document.querySelector('#jobSoftwareOne').innerHTML = `<p>${firstJobText}</p>`;
+
+      // Cargar y mostrar la experiencia de trabajo de softwareOne
+      let secondJobText = languageData.workExperience.stefaniniITSolutions
+        .replace(/\n/g, '<br>') // Primero reemplaza los saltos de línea por <br>
+        .replace(/-/g, ' ● ');  // Luego reemplaza los guiones por puntos grandes
+      document.querySelector('#jobStefaniniITSolutions').innerHTML = `<p>${secondJobText}</p>`;
+    })
+    .catch(error => console.error('Error:', error));
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('content.json')
-      .then(response => response.json())
-      .then(data => {
-        let formattedText = data.profileDescription.replace(/\n/g, '<br>');  
-        document.querySelector('#profile p').innerHTML = formattedText;
-      })
-      .catch(error => console.error('Error:', error));
+  loadContent();
+  drawSkillBars();
 });
 
 
@@ -51,9 +78,9 @@ function drawSkillBar(canvasId, skillLevel) {
   ctx.fillRect(0, 0, skillLevel, height); // Ajusta el ancho según el nivel de habilidad
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function drawSkillBars() {
   drawSkillBar('englishSkill', 70); // 65% para inglés
-  drawSkillBar('spanishSkill', 95); // 90% para español
+  // drawSkillBar('spanishSkill', 95); // 90% para español
 
   drawSkillBar('pythonSkill', 75); // 90% para español
   drawSkillBar('javaSkill', 90); // 90% para español
@@ -68,7 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
   drawSkillBar('mavenSkill', 85); // 90% para español
   drawSkillBar('gradleSkill', 85); // 90% para español
   drawSkillBar('nodejsSkill', 70); // 90% para español
-  drawSkillBar('cloudSkill', 45); // 90% para español
 
   drawSkillBar('angularSkill', 75); // 90% para español
   drawSkillBar('reactSkill', 30); // 90% para español
@@ -92,4 +118,13 @@ document.addEventListener('DOMContentLoaded', () => {
   drawSkillBar('sqLiteSkill', 70); // 90% para español
   drawSkillBar('auroraDBSkill', 40); // 90% para español
   drawSkillBar('dynamoDbSkill', 40); // 90% para español
-});
+  drawSkillBar('clouds-skills', 30); // 90% para español
+  drawSkillBar('architectures-skills', 65); // 90% para español
+  drawSkillBar('appicationServers-skills', 55); // 90% para español
+  drawSkillBar('deployments-skills', 40); // 90% para español
+  drawSkillBar('dataTransmissions-skills', 35); // 90% para español
+  drawSkillBar('tests-skills', 50); // 90% para español
+  drawSkillBar('repositorys-skills', 80); // 90% para español
+}
+
+

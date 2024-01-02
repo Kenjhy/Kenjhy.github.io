@@ -31,6 +31,62 @@
           </div>
         </header>
 
+        <!-- WORK EXPERIENCE -->
+
+        <section id="Job">
+          <h3><i class="fas fa-briefcase"></i> WORK EXPERIENCE</h3>
+          <hr />
+          <div class="timeline-container">
+            <!-- Iconos para cada job-entry -->
+            <div class="timeline-icon"></div> <!-- para el primer job-entry -->
+            <div class="timeline-icon"></div> <!-- para el segundo job-entry -->
+            <!-- Agrega más divs con la clase timeline-icon si tienes más job-entries -->
+          </div>
+          <div class="job-container">
+            <!-- First Job Entry -->
+            <div class="job-entry">
+              <div class="job-column job-left">
+                <p><b>Company:</b></p>
+                <p><b>Job title:</b></p>
+                <p><b>Immediate boss:</b></p>
+                <p><b>Phone number:</b></p>
+              </div>
+              <div class="job-column job-right">
+                <p><b>SoftwareOne InterGrupo, </b>(01/02/2022–Actualmente)</p>
+                <p>Senior Software Engineer & Cloud Services</p>
+                <p>Aida Ortiz or Angela Buitrago</p>
+                <p>(601)5803199 or +57 3217902924</p>
+              </div>
+            </div>
+            <div class="job-full-width">
+              <p><b>Duties and Accomplishment:</b> </p>
+              <div id="jobSoftwareOne"></div>
+            </div>
+          </div>
+
+          <div class="job-container">
+            <!-- First Job Entry -->
+            <div class="job-entry">
+              <div class="job-column job-left">
+                <p><b>Company:</b></p>
+                <p><b>Job title:</b></p>
+                <p><b>Immediate boss:</b></p>
+                <p><b>Phone number:</b></p>
+              </div>
+              <div class="job-column job-right">
+                <p><b>Stefanini IT Solutions, </b>(11/08/2021–01/02/2022)</p>
+                <p>Senior Full-Stack Software Development Engineer</p>
+                <p>Lorena Pérez</p>
+                <p>(601)7454777 or +57 3175749894</p>
+              </div>
+            </div>
+            <div class="job-full-width">
+              <p><b>Duties and Accomplishment:</b> </p>
+              <div id="jobStefaniniITSolutions"></div>
+            </div>
+          </div>
+        </section>
+
         <section id="education">
           <h3><i class="fa-solid fa-graduation-cap"></i> EDUCATION</h3>
           <hr />
@@ -111,37 +167,28 @@
 
             <div class="education-entry">
               <div class="education-column education-left">
-                <p><b>Diplomado Desarrollo Software</b></p>
-                <p>2020 - 2023</p>
+                <p><b>Java EE</b></p>
+                <p>2016 - 2019</p>
               </div>
               <div class="education-column education-right">
-                <p><b>Mintic</b></p>
-                <p>Python, Java, C#, Angular, Node.js, Metodologías agiles, Devops, Pruebas unitarias, Cloud.</p>
+                <p><b>Udemy, Virtual course</b></p>
+                <p>Security, Web Servicies, Spring MVC , SOAP, REST, EJB, JPA, JSP, JSF, JDBC Ajax, html/css, JavaScript, Ajax Json.</p>
               </div>
             </div>
 
             <div class="education-entry">
               <div class="education-column education-left">
-                <p><b>Diplomado Desarrollo Software</b></p>
-                <p>2020 - 2023</p>
+                <p><b>software quality</b></p>
+                <p>2017 - 2017</p>
               </div>
               <div class="education-column education-right">
-                <p><b>Mintic</b></p>
-                <p>Python, Java, C#, Angular, Node.js, Metodologías agiles, Devops, Pruebas unitarias, Cloud.</p>
+                <p><b>SENA, Virtual course</b></p>
+                <p>Modelos de calidad de software.</p>
+                <p>Calidad en el desarrollo de software.</p>
+                <p>Aplicación de la calidad del software en el proceso de desarrollo.</p>
               </div>
             </div>
           </div>
-        </section>
-
-      
-        <section id="software">
-          <!-- Lista de software -->
-        </section>
-        <section id="referencias">
-          <!-- Referencias -->
-        </section>
-        <section id="idiomas">
-          <!-- Idiomas -->
         </section>
       </div>
 
@@ -192,13 +239,10 @@
           <h3><i class="fa-solid fa-language"></i> LANGUAGES</h3>
           <hr />
           <div class="section-container">
+            <span>Proficency at a professional level</span>
             <div class="bar-separation">
               <span>English</span>
               <canvas id="englishSkill" class="canvas-bars"></canvas>
-            </div>
-            <div class="bar-separation">
-              <span>Spanish</span>
-              <canvas id="spanishSkill" class="canvas-bars"></canvas>
             </div>
           </div>
         </section>
@@ -258,10 +302,6 @@
             <div class="bar-separation">
               <span>Node.js</span>
               <canvas id="nodejsSkill" class="canvas-bars"></canvas>
-            </div>
-            <div class="bar-separation">
-              <span>GCP/AWS Cloud</span>
-              <canvas id="cloudSkill" class="canvas-bars"></canvas>
             </div>
           </div>
         </section>
@@ -368,34 +408,114 @@
         </section>
 
         <div id="without-bar-container">
-          <section id="architectCloud-skills">
+          <section id="cloud-skills">
             <h3>
-              <i class="fa-solid fa-sitemap"></i> ARCHITECTURE/CLOUD SKILLS
+              <i class="fa-solid fa-cloud"></i> CLOUD SKILLS
             </h3>
             <hr />
             <div class="section-container">
+              <div class="bar-separation">
+                <canvas id="clouds-skills" class="canvas-bars"></canvas>
+              </div>
+              <p>AWS(Amazon web services)</p>
+              <p>AWS S3 (Simple storage service)</p>
+              <p>AWS EC2 (Simple storage service)</p>
+              <p>AWS Lambda</p>
+              <p>AWS SQS (Simple queue service)</p>
+              <p>AWS Cognito</p>
+              <p>AWS Secret manager</p>
+              <p>AWS WAF (Web application firewall)</p>
+              <p>AWS Cloudwatch</p>
+              <p>AWS CLI(Command line interface)</p>
+              <p>AWS IAM(Identity access management)</p>
+              <p>AWS Fargate (Start serverless Containers)</p>
+              <p>AWS CodeCommit</p>
+              <p>AWS CodePipeline(Automate CI/CD Workflows)</p>
+              <p>Google Cloud Secret Manager</p>
+              <p>Google Cloud storage</p>
+              <p>Google Cloud Secret Manager</p>
+              <p>Google Cloud auth</p>
+              <p>Google Cloud api core</p>
+            </div>
+          </section>
+
+          <section id="architecture-skills">
+            <h3>
+              <i class="fa-solid fa-sitemap"></i> ARCHITECTURE SKILLS
+            </h3>
+            <hr />
+            <div class="section-container">
+              <div class="bar-separation">
+                <canvas id="architectures-skills" class="canvas-bars"></canvas>
+              </div>
               <p>Software Design Patterns</p>
               <p>Software Architecture Patterns</p>
               <p>Microservices</p>
               <p>Monolithic</p>
               <p>REST and RESTFull Services</p>
               <p>SOAP Services</p>
-              <p>AWS(Amazon Web Services)</p>
-              <p>Amazon S3 (Simple Storage Service)</p>
-              <p>Amazon Lambda</p>
-              <p>Amazon SQS (Simple Queue Service)</p>
-              <p>Amazon Cognito</p>
-              <p>Amazon Secret Manager</p>
-              <p>Amazon WAF (Web Application Firewall)</p>
-              <p>ActiveMQ Artemis</p>
-              <p>Google Cloud Secret Manager</p>
-              <p>Google Cloud storage</p>
-              <p>Google Cloud Secret Manager</p>
-              <p>Google Cloud auth</p>
-              <p>Google Cloud api core</p>
+              <p>N-teir / Hexagonal and Clean</p>
+            </div>
+          </section>
+
+          <br />
+
+          <section id="appicationServer-skills">
+            <h3>
+              <i class="fa-solid fa-server"></i> APLICATION'S SERVERS SKILLS
+            </h3>
+            <hr />
+            <div class="section-container">
+              <div class="bar-separation">
+                <canvas id="appicationServers-skills" class="canvas-bars"></canvas>
+              </div>
+              <p>Tomcat</p>
+              <p>Glassfish</p>
+              <p>JBoss AS / JBoss EAP</p>
+              <p>WebSphere Application Server (WAS)</p>
+              <p>Internet Information Server (ISS)</p>
+              <p>ASGI / WSGI</p>
+            </div>
+          </section>
+
+          <section id="deployment-skills">
+            <h3><i class="fas fa-rocket"></i> DEPLOYMENT SKILLS</h3>
+            <hr />
+            <div class="section-container">
+              <div class="bar-separation">
+                <canvas id="deployments-skills" class="canvas-bars"></canvas>
+              </div>
               <p>Buckets</p>
               <p>Docker</p>
+              <p>SonarQube</p>
+              <p>Jenkins</p>
+            </div>
+          </section>
+
+          <section id="dataTransmission-skills">
+            <h3><i class="fas fa-envelope"></i> DATA TRANSMISSION SKILLS</h3>
+            <hr />
+            <div class="section-container">
+              <div class="bar-separation">
+                <canvas id="dataTransmissions-skills" class="canvas-bars"></canvas>
+              </div>
+              <p>ActiveMQ</p>
+              <p>Misquito Broker</p>
               <p>Apache Camel</p>
+              <p>Kafka</p>
+            </div>
+          </section>
+
+          <section id="test-skills">
+            <h3><i class="fas fa-check-circle"></i> TEST SKILLS</h3>
+            <hr />
+            <div class="section-container">
+              <div class="bar-separation">
+                <canvas id="tests-skills" class="canvas-bars"></canvas>
+              </div>
+              <p>JUnit</p>
+              <p>Unittest</p>
+              <p>Mock</p>
             </div>
           </section>
 
@@ -403,10 +523,14 @@
             <h3><i class="fa-brands fa-git-alt"></i> REPOSITORY SKILLS</h3>
             <hr />
             <div class="section-container">
+              <div class="bar-separation">
+                <canvas id="repositorys-skills" class="canvas-bars"></canvas>
+              </div>
               <p>Git</p>
               <p>GitHub</p>
               <p>GitLab</p>
               <p>Tam Foundation server</p>
+              <p>SVN</p>
             </div>
           </section>
 
@@ -428,8 +552,11 @@
     </div>
 
     <button id="download">Descargar CV en PDF</button>
+    <button onclick="changeLanguage('en')">English</button>
+    <button onclick="changeLanguage('es')">Español</button>
     <footer>
       <p>Contacto: <span id="email">tuemail@example.com</span></p>
+      <p>implement, implant and deployment</p>
     </footer>
 
     <script src="script.js"></script>
