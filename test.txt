@@ -1,0 +1,13 @@
+Desarrollador, Arquitectura, analista, diseñador, Implementación, automatización, integrador, unint test, documentación, valoración y estimación, proyectos o requisitos.
+
+-
+Definición e interpretación de la arquitectura, apoyo en la construcción y desarrollo de microservicios y Api's, integración de sistemas y componentes, transformacion de datos (Xml to Json), servicios batch, Pull Request Pipeline, TDD, con (Python, Java, JavaScript, AWS, S3, EC2, RDS, WAF, Cognito, SQS, SES, Lambda, DynamoDB,  REST, SOAP, Jenkins, Sql Server, Oracle PL/Sql, Moks) 
+
+Recepción de proyectos, nuevas licitaciones, migración, desarrollo, nuevas funcionalidades, despliegue con (Python, FastApi, Django, Flask), para AFINIA(empresa prestadora de servicios de energía) proyectos como (Analista virtual de facturación, virtual intelligence analysis, analista virtual de reclamo, optimización y mantenimiento de la agenda, Alarmas Fraudes.)
+
+- Administración de proyectos, Servidores, desarrollo nuevas funcionalidades con (AI, NPL, OCR Optical Character recognition, TQDM, NLTK, Poetry, Uvicorn, Google Cloud, instancias VM, FastApi) para Lucro (Alpina, Postobon) proyectos como ( Recognition service)
+
+- Soporte, análisis y desarrollo de nuevas funcionalidades con (Java) para EMP (Empresas públicas de Medellín) proyectos como (Captura de presupuesto, Plan de contratación)
+
+- Desarrollo de un nuevo proyecto, integraciones, microservicios con (Java, Sprint Boot, AWS, LDAP, Rest, Soap, ChatBot) para CCB (Cámara de comercio) proyectos como (Rediseño Registro y pago, Trasladó de domicilio, Miembros y mentores de junta, SICO, Línea de reacción Inmediata).
+
