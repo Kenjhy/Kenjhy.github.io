@@ -11,4 +11,4 @@
 
 - You can also visit the website at https://kenjhy.github.io/ where the CV is Deployed, created with: https://pages.github.com/
 
-- For the design of the icons I used: https://fontawesome.com/icons
+- For the design of the icons I used: https://fontawesome.com/icons you can download here: https://fontawesome.com/docs/web/setup/host-yourself/webfonts

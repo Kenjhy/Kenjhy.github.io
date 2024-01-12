@@ -43,13 +43,50 @@ function loadContent() {
         .replace(/-/g, ' ● ');  // Luego reemplaza los guiones por puntos grandes
       document.querySelector('#jobSoftwareOne').innerHTML = `<p>${firstJobText}</p>`;
 
-      // Cargar y mostrar la experiencia de trabajo de softwareOne
+      // Cargar y mostrar la experiencia de trabajo de StefaniniITSolutions
       let secondJobText = languageData.workExperience.stefaniniITSolutions
         .replace(/\n/g, '<br>') // Primero reemplaza los saltos de línea por <br>
         .replace(/-/g, ' ● ');  // Luego reemplaza los guiones por puntos grandes
       document.querySelector('#jobStefaniniITSolutions').innerHTML = `<p>${secondJobText}</p>`;
+      
+      // Cargar y mostrar la experiencia de trabajo de carvajalTyS
+      let thirdJobText = languageData.workExperience.carvajalTyS
+        .replace(/\n/g, '<br>') // Primero reemplaza los saltos de línea por <br>
+        .replace(/-/g, ' ● ');  // Luego reemplaza los guiones por puntos grandes
+      document.querySelector('#jobCarvajalTyS').innerHTML = `<p>${thirdJobText}</p>`;
+      
+      // Cargar y mostrar la experiencia de trabajo de gmlAviatur
+      let fourthJobText = languageData.workExperience.gmlAviatur
+        .replace(/\n/g, '<br>') // Primero reemplaza los saltos de línea por <br>
+        .replace(/-/g, ' ● ');  // Luego reemplaza los guiones por puntos grandes
+      document.querySelector('#jobGmlAviatur').innerHTML = `<p>${fourthJobText}</p>`;
+
+      // Cargar y mostrar la experiencia de trabajo de smartLawTech
+      let fifthJobText = languageData.workExperience.smartLawTech
+      .replace(/\n/g, '<br>') // Primero reemplaza los saltos de línea por <br>
+      .replace(/-/g, ' ● ');  // Luego reemplaza los guiones por puntos grandes
+      document.querySelector('#jobSmartLawTech').innerHTML = `<p>${fifthJobText}</p>`;
+      
+      // Cargar y mostrar la experiencia de trabajo de novatecSolutions
+      let sixthJobText = languageData.workExperience.novatecSolutions
+      .replace(/\n/g, '<br>') // Primero reemplaza los saltos de línea por <br>
+      .replace(/-/g, ' ● ');  // Luego reemplaza los guiones por puntos grandes
+      document.querySelector('#jobNovatecSolutions').innerHTML = `<p>${sixthJobText}</p>`;
+      
+      const cloudSkillsTexts = data.cloudSkillsTexts;
+      displayCloudSkills(cloudSkillsTexts);
     })
     .catch(error => console.error('Error:', error));
+}
+
+
+function displayCloudSkills(cloudSkillsTexts) {
+  const cloudSkillsSection = document.querySelector('#cloud-skills .section-container');
+  let htmlContent = '';
+  cloudSkillsTexts.forEach(text => {
+    htmlContent += `<p>${text}</p>`;
+  });
+  cloudSkillsSection.innerHTML = htmlContent;
 }
 
 document.addEventListener('DOMContentLoaded', () => {

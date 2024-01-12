@@ -1,7 +1,9 @@
 Desarrollador, Arquitectura, analista, diseñador, Implementación, automatización, integrador, unint test, documentación, valoración y estimación, proyectos o requisitos.
 
 -
-Definición e interpretación de la arquitectura, apoyo en la construcción y desarrollo de microservicios y Api's, integración de sistemas y componentes, transformacion de datos (Xml to Json), servicios batch, Pull Request Pipeline, TDD, con (Python, Java, JavaScript, AWS, S3, EC2, RDS, WAF, Cognito, SQS, SES, Lambda, DynamoDB,  REST, SOAP, Jenkins, Sql Server, Oracle PL/Sql, Moks) 
+Diseño, construcción y integración de la solución, implementar estructura, patrones, y diagramas de arquitectura, desarrollo de microservicios y Api's, Gateway, integración de sistemas y componentes, transformacion de datos (Xml to Json), servicios batch, Pull Request Pipeline. , con (Spring Boot, AWS, S3, EC2, RDS, SQS, Kubernetes, Doker). Para los proyectos(Aportes en línea, Banco BBVA, Banco occidente, Banco AvVillas, Banco Popular, Mareigua).
+
+Desarrollo de una aplicación que brinda seguros a los trabajadores que sufren accidente o enfermedad, con (Java, Oracle) para el proyecto (Seguros Alfa).
 
 Recepción de proyectos, nuevas licitaciones, migración, desarrollo, nuevas funcionalidades, despliegue con (Python, FastApi, Django, Flask), para AFINIA(empresa prestadora de servicios de energía) proyectos como (Analista virtual de facturación, virtual intelligence analysis, analista virtual de reclamo, optimización y mantenimiento de la agenda, Alarmas Fraudes.)
 
