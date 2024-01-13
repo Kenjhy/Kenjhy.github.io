@@ -183,12 +183,6 @@
         <section id="education">
           <h3><i class="fa-solid fa-graduation-cap"></i> EDUCATION</h3>
           <hr />
-          <div class="timeline-container">
-            <!-- Iconos para cada education-entry -->
-            <div class="timeline-icon"></div> <!-- para el primer education-entry -->
-            <div class="timeline-icon"></div> <!-- para el segundo education-entry -->
-            <!-- Agrega más divs con la clase timeline-icon si tienes más education-entries -->
-          </div>
           <div class="education-container">
             <!-- First Education Entry -->
             <div class="education-entry">
@@ -202,8 +196,6 @@
               </div>
             </div>
 
-                    
-        
             <!-- Second Education Entry -->
             <div class="education-entry">
               <div class="education-column education-left">
@@ -287,24 +279,22 @@
         </section>
 
         <section id="profesionalReferces">
-          <h3><i class="fa-solid fa-user-tie"></i> PROFESIONAL REFERENCES</h3>
+          <h3><i class="fa-solid fa-user-tie"></i> PROFESSIONAL REFERENCES</h3>
           <hr />
-          <div class="timeline-container">
-            <!-- Iconos para cada education-entry -->
-            <div class="timeline-icon"></div> <!-- para el primer education-entry -->
-            <div class="timeline-icon"></div> <!-- para el segundo education-entry -->
-            <!-- Agrega más divs con la clase timeline-icon si tienes más education-entries -->
-          </div>
           <div class="education-container">
             <!-- First Education Entry -->
             <div class="education-entry">
-              <div class="education-column education-left">
-                <p><b>Systems Engineering</b></p>
-                <p>2020 - 023</p>
+              <div class="education-column reference-left">
+                <p><b>David Leonardo Cubillos Jauregui</b></p>
+                <p>Systems Engineer, Senior Full Stack</p>
+                <p>+57 3167154281</p>
+                <p>dcfire696@gmail.com</p>
               </div>
-              <div class="education-column education-right">
-                <p><b>Universidad del Área Andina</b></p>
-                <p>(Completed). I stood out as the best in the class in software development.</p>
+              <div class="education-column reference-right">
+                <p><b>Jonathan Quijano</b></p>
+                <p>Software Architect, Master Developer</p>
+                <p>+57 3007977859</p>
+                <p>jquijano82@gmail.com</p>
               </div>
             </div>
           </div>
@@ -313,22 +303,20 @@
         <section id="personalReferences">
           <h3><i class="fa-solid fa-users"></i> PERSONAL REFERENCES</h3>
           <hr />
-          <div class="timeline-container">
-            <!-- Iconos para cada education-entry -->
-            <div class="timeline-icon"></div> <!-- para el primer education-entry -->
-            <div class="timeline-icon"></div> <!-- para el segundo education-entry -->
-            <!-- Agrega más divs con la clase timeline-icon si tienes más education-entries -->
-          </div>
           <div class="education-container">
             <!-- First Education Entry -->
             <div class="education-entry">
-              <div class="education-column education-left">
-                <p><b>Systems Engineering</b></p>
-                <p>2020 - 023</p>
+              <div class="education-column reference-left">
+                <p><b>Brayan Alejandro Martínez</b></p>
+                <p>System Engineer Software Developer</p>
+                <p>+57 3204796677</p>
+                <p>alejandromardelg@gmail.com</p>
               </div>
-              <div class="education-column education-right">
-                <p><b>Universidad del Área Andina</b></p>
-                <p>(Completed). I stood out as the best in the class in software development.</p>
+              <div class="education-column reference-right">
+                <p><b>Angie Lizeth Araque Mora</b></p>
+                <p>Software Engineer, Senior Full Stack</p>
+                <p>+57 323 2887533</p>
+                <p>angielizeth.araque@gmail.com</p>
               </div>
             </div>
           </div>
@@ -337,30 +325,40 @@
         <section id="familiReferences">
           <h3><i class="fa-solid fa-people-roof">‌</i> FAMILY REFERENCES</h3>
           <hr />
-          <div class="timeline-container">
-            <!-- Iconos para cada education-entry -->
-            <div class="timeline-icon"></div> <!-- para el primer education-entry -->
-            <div class="timeline-icon"></div> <!-- para el segundo education-entry -->
-            <!-- Agrega más divs con la clase timeline-icon si tienes más education-entries -->
-          </div>
           <div class="education-container">
             <!-- First Education Entry -->
             <div class="education-entry">
-              <div class="education-column education-left">
-                <p><b>Systems Engineering</b></p>
-                <p>2020 - 023</p>
+              <div class="education-column reference-left">
+                <p><b>Rommel Santiago Vargas Pamplona</b></p>
+                <p>Physics and mathematics teacher</p>
+                <p>+57 3236959039</p>
+                <p>rudysan696@hotmail.com</p>
               </div>
-              <div class="education-column education-right">
-                <p><b>Universidad del Área Andina</b></p>
-                <p>(Completed). I stood out as the best in the class in software development.</p>
+              <div class="education-column reference-right">
+                <p><b>Cristian David Quizá Pamplona</b></p>
+                <p>Software Developer.</p>
+                <p>+57 312507287</p>
+                <p>cristian.david_95@hotmail.com</p>
               </div>
             </div>
           </div>
         </section>
+
+        <footer id="signature">
+          <div class="signature-line"></div>
+          <h3><i class="fa-solid fa-signature"></i> Signature</h3>
+        </footer>
+      
       </div>
 
       <!-- ----------------------- right-side ----------------------- -->
       <div id="right-side">
+        <header>
+          <button id="download"><i class="fa-regular fa-file-pdf fa-lg"></i></button>
+          <button onclick="changeLanguage('en')"><img src="img/usa-flag.png" alt="USA Flag" style="height: 15px;">US</button>
+          <button onclick="changeLanguage('es')"><img src="img/spain-flag.png" alt="Spain Flag" style="height: 15px;">ES</button>
+        </header>
+        
         <h3 class="section-title"><i class="fas fa-comments"></i> CONTACT</h3>
         <hr />
         <section id="contact">
@@ -475,7 +473,6 @@
 
         
         <!-- Start second page -->
-        <div class="page-break"></div>
         <br />
         <section id="frontend-skills">
           <h3><i class="fa-solid fa-palette"></i> FRONTEND SKILLS</h3>
@@ -700,15 +697,8 @@
           </section>
         </div>
       </div>
+      
     </div>
-
-    <button id="download">Descargar CV en PDF</button>
-    <button onclick="changeLanguage('en')">English</button>
-    <button onclick="changeLanguage('es')">Español</button>
-    <footer>
-      <p>Contacto: <span id="email">tuemail@example.com</span></p>
-      <p>implement, implant and deployment</p>
-    </footer>
 
     <script src="script.js"></script>
   </body>

@@ -1,11 +1,6 @@
 // Aquí puedes agregar JavaScript para interactividad
 // Por ejemplo, cambiar dinámicamente tu email o mostrar más detalles al clickear
 
-document.getElementById('email').addEventListener('click', function() {
-  this.textContent = 'tuemailreal@example.com';
-});
-
-
 // Funcionalidad para descargar el CV en PDF con calidad mejorada
 document.getElementById('download').addEventListener('click', () => {
   var opt = {

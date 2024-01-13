@@ -112,7 +112,7 @@ body {
     .education-entry {
       display: flex;
       justify-content: space-between;
-      margin-bottom: -5px; /* Space between entries */
+      margin-bottom: -9px; /* Space between entries */
     }
   
       .education-column {
@@ -129,6 +129,14 @@ body {
       
       .education-right {
         flex: 0 0 70%; /* 70% width for the right column */
+      }
+
+      .reference-left {
+        flex: 0 0 50%; /* 30% width for the left column */
+      }
+      
+      .reference-right {
+        flex: 0 0 50%; /* 70% width for the right column */
       }
 
     .job-container {
@@ -213,6 +221,12 @@ body {
   font-size: 13px; /* Adjust the font size as needed */
 }
 
+  header i {
+    margin-right: 10px; /* Spacing between icon and text */
+    color: rgb(190, 122, 122); /* Icon color */
+    /* You can add other styles like font-size, etc. */
+  }
+
   #right-side hr {
     border: none;
     height: 1px;
@@ -294,3 +308,25 @@ body {
     #tools {
       text-align: center; /* Centra todo el contenido de la sección tools */
     }
+
+    button {
+      background: none; /* Elimina el fondo predeterminado */
+      border: none; /* Elimina el borde predeterminado */
+      cursor: pointer; /* Muestra el cursor como un puntero para indicar que es clickeable */
+      padding: 0; /* Elimina el padding predeterminado */
+      margin: 0; /* Elimina el margen predeterminado */
+      height: 20px; /* Altura del botón, ajusta según sea necesario */
+  }
+
+  #signature {
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 45px;
+  }
+
+  .signature-line {
+      width: 200px; /* Ajusta el ancho de la línea */
+      border-top: 1px solid black;
+      margin: 0 auto 0px; /* Centra la línea y agrega un pequeño margen debajo de ella */
+  }
+
