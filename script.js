@@ -5,7 +5,7 @@
 document.getElementById('download').addEventListener('click', () => {
   var opt = {
     margin:       0,
-    filename:     'mi-cv.pdf',
+    filename:     'Daniel_Felipe_Vargas_Pamplona_cv.pdf',
     image:        { type: 'jpeg', quality: 0.98 },
     html2canvas:  { scale: 4, logging: true, useCORS: true }, // Aumenta la escala para mejorar la calidad
     jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
