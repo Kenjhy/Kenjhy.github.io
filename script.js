@@ -76,7 +76,7 @@ function loadContent() {
 
 
 function displayCloudSkills(cloudSkillsTexts) {
-  const cloudSkillsSection = document.querySelector('#cloud-skills .section-container');
+  const cloudSkillsSection = document.querySelector('#clouds-skills-text');
   let htmlContent = '';
   cloudSkillsTexts.forEach(text => {
     htmlContent += `<p>${text}</p>`;
@@ -150,7 +150,7 @@ function drawSkillBars() {
   drawSkillBar('sqLiteSkill', 70); // 90% para español
   drawSkillBar('auroraDBSkill', 40); // 90% para español
   drawSkillBar('dynamoDbSkill', 40); // 90% para español
-  drawSkillBar('clouds-skills', 30); // 90% para español
+  drawSkillBar('clouds-skills-bar', 30); // 90% para español
   drawSkillBar('architectures-skills', 65); // 90% para español
   drawSkillBar('appicationServers-skills', 55); // 90% para español
   drawSkillBar('deployments-skills', 40); // 90% para español
