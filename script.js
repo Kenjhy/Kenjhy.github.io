@@ -29,44 +29,60 @@ function loadContent() {
     .then(response => response.json())
     .then(data => {
       const languageData  = data[currentLanguage];
-      let profileText = languageData.profileDescription.replace(/\n/g, '<br>');  
+      let profileData = languageData.profileDescription;
+      let profileText = Array.isArray(profileData)
+        ? profileData.map(paragraph => paragraph).join('<br><br>')
+        : profileData.replace(/\n/g, '<br>');
       document.querySelector('#profile p').innerHTML = profileText;
+      
 
       // Cargar y mostrar la experiencia de trabajo de softwareOne
-      let firstJobText = languageData.workExperience.softwareOne
-        .replace(/\n/g, '<br>') // Primero reemplaza los saltos de línea por <br>
-        .replace(/-/g, ' ● ');  // Luego reemplaza los guiones por puntos grandes
-      document.querySelector('#jobSoftwareOne').innerHTML = `<p>${firstJobText}</p>`;
+      let softwareOneArray = languageData.workExperience.softwareOne;
+      let softwareOneText = Array.isArray(softwareOneArray)
+        ? softwareOneArray.map(item => `● ${item}`).join('<br><br>')
+        : softwareOneArray.replace(/\n/g, '<br>').replace(/-/g, ' ● ');
+      document.querySelector('#jobSoftwareOne').innerHTML = `<p>${softwareOneText}</p>`;
+
 
       // Cargar y mostrar la experiencia de trabajo de StefaniniITSolutions
-      let secondJobText = languageData.workExperience.stefaniniITSolutions
-        .replace(/\n/g, '<br>') // Primero reemplaza los saltos de línea por <br>
-        .replace(/-/g, ' ● ');  // Luego reemplaza los guiones por puntos grandes
-      document.querySelector('#jobStefaniniITSolutions').innerHTML = `<p>${secondJobText}</p>`;
+      let stefaniniITSolutionsArray = languageData.workExperience.stefaniniITSolutions;
+      let stefaniniITSolutionsText = Array.isArray(stefaniniITSolutionsArray)
+        ? stefaniniITSolutionsArray.map(item => `● ${item}`).join('<br><br>')
+        : stefaniniITSolutionsArray.replace(/\n/g, '<br>').replace(/-/g, ' ● ');
+      document.querySelector('#jobStefaniniITSolutions').innerHTML = `<p>${stefaniniITSolutionsText}</p>`;
+      
       
       // Cargar y mostrar la experiencia de trabajo de carvajalTyS
-      let thirdJobText = languageData.workExperience.carvajalTyS
-        .replace(/\n/g, '<br>') // Primero reemplaza los saltos de línea por <br>
-        .replace(/-/g, ' ● ');  // Luego reemplaza los guiones por puntos grandes
-      document.querySelector('#jobCarvajalTyS').innerHTML = `<p>${thirdJobText}</p>`;
+      let carvajalTySArray = languageData.workExperience.carvajalTyS;
+      let carvajalTySText = Array.isArray(carvajalTySArray)
+        ? carvajalTySArray.map(item => `● ${item}`).join('<br><br>')
+        : carvajalTySArray.replace(/\n/g, '<br>').replace(/-/g, ' ● ');
+      document.querySelector('#jobCarvajalTyS').innerHTML = `<p>${carvajalTySText}</p>`;
+      
       
       // Cargar y mostrar la experiencia de trabajo de gmlAviatur
-      let fourthJobText = languageData.workExperience.gmlAviatur
-        .replace(/\n/g, '<br>') // Primero reemplaza los saltos de línea por <br>
-        .replace(/-/g, ' ● ');  // Luego reemplaza los guiones por puntos grandes
-      document.querySelector('#jobGmlAviatur').innerHTML = `<p>${fourthJobText}</p>`;
+      let gmlAviaturArray = languageData.workExperience.gmlAviatur;
+      let gmlAviaturText = Array.isArray(gmlAviaturArray)
+        ? gmlAviaturArray.map(item => `● ${item}`).join('<br><br>')
+        : gmlAviaturArray.replace(/\n/g, '<br>').replace(/-/g, ' ● ');
+      document.querySelector('#jobGmlAviatur').innerHTML = `<p>${gmlAviaturText}</p>`;
+      
 
       // Cargar y mostrar la experiencia de trabajo de smartLawTech
-      let fifthJobText = languageData.workExperience.smartLawTech
-      .replace(/\n/g, '<br>') // Primero reemplaza los saltos de línea por <br>
-      .replace(/-/g, ' ● ');  // Luego reemplaza los guiones por puntos grandes
-      document.querySelector('#jobSmartLawTech').innerHTML = `<p>${fifthJobText}</p>`;
+      let smartLawTechArray = languageData.workExperience.smartLawTech;
+      let smartLawTechText = Array.isArray(smartLawTechArray)
+        ? smartLawTechArray.map(item => `● ${item}`).join('<br><br>')
+        : smartLawTechArray.replace(/\n/g, '<br>').replace(/-/g, ' ● ');
+      document.querySelector('#jobSmartLawTech').innerHTML = `<p>${smartLawTechText}</p>`;
+      
       
       // Cargar y mostrar la experiencia de trabajo de novatecSolutions
-      let sixthJobText = languageData.workExperience.novatecSolutions
-      .replace(/\n/g, '<br>') // Primero reemplaza los saltos de línea por <br>
-      .replace(/-/g, ' ● ');  // Luego reemplaza los guiones por puntos grandes
-      document.querySelector('#jobNovatecSolutions').innerHTML = `<p>${sixthJobText}</p>`;
+      let novatecSolutionsArray = languageData.workExperience.novatecSolutions;
+      let novatecSolutionsText = Array.isArray(novatecSolutionsArray)
+        ? novatecSolutionsArray.map(item => `● ${item}`).join('<br><br>')
+        : novatecSolutionsArray.replace(/\n/g, '<br>').replace(/-/g, ' ● ');
+      document.querySelector('#jobNovatecSolutions').innerHTML = `<p>${novatecSolutionsText}</p>`;
+      
       
       const cloudSkillsTexts = data.cloudSkillsTexts;
       displayCloudSkills(cloudSkillsTexts);
@@ -114,22 +130,23 @@ function drawSkillBars() {
   drawSkillBar('englishSkill', 70); // 65% para inglés
   // drawSkillBar('spanishSkill', 95); // 90% para español
 
-  drawSkillBar('pythonSkill', 75); // 90% para español
+  drawSkillBar('pythonSkill', 90); // 90% para español
   drawSkillBar('javaSkill', 90); // 90% para español
   drawSkillBar('javaScriptSkill', 70); // 90% para español
   drawSkillBar('fastApiSkill', 75); // 90% para español
-  drawSkillBar('djangoSkill', 75); // 90% para español
-  drawSkillBar('flaskSkill', 60); // 90% para español
-  drawSkillBar('tensorFlowSkill', 65); // 90% para español
+  drawSkillBar('flaskSkill', 75); // 90% para español
+  drawSkillBar('djangoSkill', 50); // 90% para español
   drawSkillBar('aiSkill', 65); // 90% para español
+  drawSkillBar('llmSkill', 50); // 90% para español
   drawSkillBar('nlpSkill', 70); // 90% para español
+  drawSkillBar('tensorFlowSkill', 65); // 90% para español
   drawSkillBar('springBootSkill', 85); // 90% para español
   drawSkillBar('mavenSkill', 85); // 90% para español
   drawSkillBar('gradleSkill', 85); // 90% para español
   drawSkillBar('nodejsSkill', 70); // 90% para español
 
-  drawSkillBar('angularSkill', 75); // 90% para español
-  drawSkillBar('reactSkill', 30); // 90% para español
+  drawSkillBar('reactSkill', 75); // 90% para español
+  drawSkillBar('angularSkill', 60); // 90% para español
   drawSkillBar('bootstrapSkill', 85); // 90% para español
   drawSkillBar('materialSkill', 70); // 90% para español
   drawSkillBar('html-cssSkill', 95); // 90% para español
@@ -145,18 +162,20 @@ function drawSkillBars() {
   drawSkillBar('mySqlSkill', 75); // 90% para español
   drawSkillBar('oracleSkill', 70); // 90% para español
   drawSkillBar('sqlServerSkill', 75); // 90% para español
+  drawSkillBar('vectorChromaSkill', 45); // 90% para español
+  drawSkillBar('vectorCosmoSkill', 45); // 90% para español
   drawSkillBar('fireBaseSkill', 75); // 90% para español
   drawSkillBar('mariaDBSkill', 50); // 90% para español
   drawSkillBar('sqLiteSkill', 70); // 90% para español
   drawSkillBar('auroraDBSkill', 40); // 90% para español
   drawSkillBar('dynamoDbSkill', 40); // 90% para español
-  drawSkillBar('clouds-skills-bar', 30); // 90% para español
+  drawSkillBar('clouds-skills-bar', 50); // 90% para español
   drawSkillBar('architectures-skills', 65); // 90% para español
   drawSkillBar('appicationServers-skills', 55); // 90% para español
-  drawSkillBar('deployments-skills', 40); // 90% para español
+  drawSkillBar('deployments-skills', 60); // 90% para español
   drawSkillBar('dataTransmissions-skills', 35); // 90% para español
   drawSkillBar('tests-skills', 50); // 90% para español
-  drawSkillBar('repositorys-skills', 80); // 90% para español
+  drawSkillBar('repositorys-skills', 85); // 90% para español
 }
 
 
