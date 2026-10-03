@@ -1,11 +1,14 @@
 {
   "en": {
     "profileDescription": [
-      "I hold a Bachelor’s Degree in Systems Engineering and an Associate Degree in Information Systems Analysis and Development, along with diplomas in Python  AI and  IoT DevNet. I have 10 years of experience in software development, focusing on backend and frontend, artificial intelligence, implementing monolithic and microservices architectural patterns, distributed systems, and object-oriented programming. I also have experience in modeling and managing databases, as well as designing UML diagrams, Test-driven development(Tdd).",
+      "I am a Systems Engineer with 10 years of experience designing and delivering software, data and AI solutions, with strong focus on generative AI, intelligent agents, RAG, LLM integrations, backend platforms and cloud architectures across AWS, Azure and GCP. I also hold an Associate Degree in Information Systems Analysis and Development, plus diplomas in Python AI and IoT DevNet.",
       "I possess experience leading both team and individual projects using agile methodologies like Scrum and Kanban, as well as traditional ones, I have been involved in every stage and process, including implementation and deployment, ensuring compliance, usability, scalability, and security.",
       "My experience spans various sectors including banking and finance, payroll and electronic invoicing, social security, travel and tourism, marketing, legal services, public and private services, freelancing, consulting, and teaching programming classes to students."
     ],
     "workExperience": {
+      "amarisConsulting": [
+        "Designed and delivered AI, agentic, data and cloud solutions for financial and regulatory processes, combining Python, FastAPI, LLMs, RAG, prompt engineering, ETL pipelines, data lakes/lakehouse patterns and multi-cloud services across AWS, Azure and GCP. Built serverless and container-based integrations with Lambda, Step Functions, ECS, ECR, AWS Batch, S3, CloudWatch, Terraform, Azure Pipelines and Secrets, improving data classification, regulatory reporting, automated analysis and operational efficiency."
+      ],
       "softwareOne": [
         "Built a generative AI agent using GPT_RAG, with (Python, LLM, Flask, Unicorn, Quart, Prompt, React, JavaScript, Semantic Kernel, Azure, Functions, App service, AI Services, AI Foundry, Bicep, GitHub Actions, Vector Database Cosmo) for SIIGO (Accounting and administrative software). Projects such as (file upload, file review and valid formats, ad supported user generation through AI).",
         "Developed a project integrating external services using (Python, Java, Spring Boot, Azure, Rest and sql) for NIRSA (Prosorja). Focused on projects such as (automate uploads and optimizing internal processes for receiving, settling, and delivering seafood products and transactions).",
@@ -38,11 +41,14 @@
   },
   "es": {
     "profileDescription": [
-      "Soy Ingeniero de Sistemas con diplomados en Python AI y IoT DevNet, y tecnólogo en análisis y desarrollo de sistemas de información. Tengo 10 años de experiencia en desarrollo de software, enfocándome en backend y frontend, inteligencia artificial, implementando patrones arquitectónicos monolíticos y de microservicios, sistemas distribuidos y programación orientada a objetos. También tengo experiencia en modelado y gestión de bases de datos, así como en diseño de diagramas UML.",
+      "Soy Ingeniero de Sistemas con 10 años de experiencia disenando y desarrollando soluciones de software, datos e inteligencia artificial, con enfoque fuerte en IA generativa, agentes inteligentes, RAG, integraciones con LLMs, plataformas backend y arquitecturas cloud en AWS, Azure y GCP. Tambien soy tecnologo en analisis y desarrollo de sistemas de informacion, con diplomados en Python AI e IoT DevNet.",
       "Poseo experiencia liderando proyectos tanto en equipo como individuales utilizando metodologías ágiles como Scrum y Kanban, así como tradicionales, he estado involucrado en cada etapa y proceso, incluyendo implementación y despliegue, asegurando cumplimiento, usabilidad, escalabilidad y seguridad.",
       "Mi experiencia abarca diversos sectores incluyendo banca y finanzas, nómina y facturación electrónica, seguridad social, viajes y turismo, marketing, servicios legales, servicios públicos y privados, freelance, consultoría y enseñanza de clases de programación a estudiantes."
     ],
     "workExperience": {
+      "amarisConsulting": [
+        "Diseno y desarrollo de soluciones de IA, agentes, datos y nube para procesos financieros y regulatorios, combinando Python, FastAPI, LLMs, RAG, prompt engineering, pipelines ETL, data lakes/lakehouse y servicios multi-cloud en AWS, Azure y GCP. Implemente integraciones serverless y con contenedores usando Lambda, Step Functions, ECS, ECR, AWS Batch, S3, CloudWatch, Terraform, Azure Pipelines y Secrets, mejorando clasificacion de datos, reportería regulatoria, analisis automatizado y eficiencia operacional."
+      ],
       "softwareOne": [
         "Desarrollo de un agente generative AI, con GPT_RAG, con (Python, LLM, Flask, Unicorn, Quart, Prompt, React, JavaScript, Semantic Kernel, Azure Functions, Azure app services, Azure AI service, Azure AI foundry, Bicep GitHub Actions, base de datos vectorial cosmo) para SIIGO(Software contable y administrativo) proyecto para (cargue de archivos, revision de archivos y formatos validos, ayudando a generar historiasde usuarios con AI).",
         "Desarrollo de un proyecto, con integraciones a servicios externos, con (Python, Java, Sprint Boot, Azure, Rest, sql) para NIRSA(Prosorja) proyectos para (automatizacion carge de plantillas, mejorar sus procesos internos de recivir, liquidar y entrega de poroductos de mar y transacciones).",
@@ -74,34 +80,9 @@
     }
   },
   "cloudSkillsTexts": [
-    "AWS(Amazon web services)",
-    "AWS S3 (Simple storage service)",
-    "AWS EC2 (Simple storage service)",
-    "AWS Lambda",
-    "AWS SQS (Simple queue service)",
-    "AWS SES (Simple email service)",
-    "AWS Cognito",
-    "AWS Secret manager",
-    "AWS WAF (Web application firewall)",
-    "AWS Cloudwatch",
-    "AWS CLI(Command line interface)",
-    "AWS IAM(Identity access management)",
-    "AWS Fargate (Start serverless Containers)",
-    "AWS CodeCommit",
-    "AWS CodePipeline(Automate CI/CD Workflows)",
-    "AWS KMS(Key management service)",
-    "AWS System manager parameter store",
-    "AWS Certificate manager SSL/TLS",
-    "AWS API Gateway",
-    "AWS xRay Collects data",
-    "AWS xRay CloudTrail",
-    "AWS Batch",
-    "AWS ElastiCache",
-    "AWS ETL(Extract, Transform, Load)",
-    "Google Cloud Secret Manager",
-    "Google Cloud storage",
-    "Google Cloud Secret Manager",
-    "Google Cloud auth",
-    "Google Cloud api core"
+    "AWS: Lambda, S3, ECS, ECR, Batch, Step Functions, SQS, CloudWatch, IAM, Secrets Manager, API Gateway, CodePipeline.",
+    "Azure: AI Foundry, OpenAI Service, AI Services, Functions, App Service, Cosmos DB Vector Database, Azure Pipelines.",
+    "GCP: Vertex AI, Cloud Storage, Secret Manager, Auth and API services.",
+    "Cloud practices: serverless, containers, IaC with Terraform/Bicep, CI/CD, ETL, monitoring and secure secrets management."
   ]
 }
