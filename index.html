@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <title>Daniel Felipe Vargas Pamplona CV</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <!-- <link
       rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/> -->
     <link rel="stylesheet" href="util/fontawesome-free-6.5.1-web/css/fontawesome.css">
-    <link href="/util/fontawesome-free-6.5.1-web/css/brands.css" rel="stylesheet">
-    <link href="/util/fontawesome-free-6.5.1-web/css/solid.css" rel="stylesheet">
+    <link href="util/fontawesome-free-6.5.1-web/css/brands.css" rel="stylesheet">
+    <link href="util/fontawesome-free-6.5.1-web/css/solid.css" rel="stylesheet">
     <link rel="icon" href="img/iconcv.jpeg" type="image/x-icon">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
-    <script src="javascript/base64Image.js "></script>
   </head>
   <body>
     <div id="cv-container">
@@ -20,15 +20,15 @@
         <header>
           <div class="left-side-column">
             <div id="profile-picture">
-              <img id="profileImage" alt="Profile picture" src="" />
+              <img id="profileImage" alt="Profile picture" src="img/Yo_2025.jpg" />
             </div>
           </div>
           <div class="left-side-column">
             <div id="personal-information">
               <h2>Daniel Felipe Vargas Pamplona</h2>
-              <h3>Full Stack Software Engineer and AI</h3>
+              <h3>AI Solutions & Full Stack Software Engineer</h3>
               <h5>ID card: 1022370888</h5>
-              <h5>Age: 33</h5>
+              <h5>Age: <span id="age"></span></h5>
               <h5>Marital status: Domestic partnership</h5>
             </div>
           </div>
@@ -55,7 +55,29 @@
                 <p><b>Phone number:</b></p>
               </div>
               <div class="job-column job-right">
-                <p><b>SoftwareOne InterGrupo, </b>(01/02/2022–21/03/2025)</p>
+                <p><b>Amaris Consulting, </b>(12/05/2025-current)</p>
+                <p>AI and Data Science Developer</p>
+                <p>Gabriel Montoya or Felipe Montoya</p>
+                <p>+57 3166906035 or felipe.montoyarestrepo@amaris.com</p>
+              </div>
+            </div>
+            <div class="job-full-width">
+              <p><b>Duties and Accomplishments:</b> </p>
+              <div id="jobAmarisConsulting"></div>
+            </div>
+          </div>
+
+          <div class="job-container">
+            <!-- First Job Entry -->
+            <div class="job-entry">
+              <div class="job-column job-left">
+                <p><b>Company:</b></p>
+                <p><b>Job title:</b></p>
+                <p><b>Immediate boss:</b></p>
+                <p><b>Phone number:</b></p>
+              </div>
+              <div class="job-column job-right">
+                <p><b>SoftwareOne InterGrupo, </b>(01/02/2022–20/03/2025)</p>
                 <p>Expert Application Development</p>
                 <p>Aida Ortiz or Manuel Sandoval</p>
                 <p>(601)5803199 or +57 3006701980</p>
@@ -102,7 +124,7 @@
                 <p><b>Phone number:</b></p>
               </div>
               <div class="job-column job-right">
-                <p><b>Carvajal, TyS, </b>(21/08/2020 – 10/08/2021)</p>
+                <p><b>Carvajal, TyS, </b>(21/08/2020 – 11/08/2021)</p>
                 <p>Intermediate Full-Stack Software Development Engineer</p>
                 <p>Claudia Gómez or Martha Sanchez</p>
                 <p>(601)2940673 or (601)2940850 or +57 3005303582</p>
@@ -127,7 +149,7 @@
                 <p><b>GML, Aviatur</b>(24/02/2020 – 19/06/2020)</p>
                 <p>Intermediate Full-Stack Software Development Engineer</p>
                 <p>Walner Fuentes or Solangie Cortes</p>
-                <p>(601)3907388 or +57 3057928156 or +57 317402552</p>
+                <p>(601)3907388 or +57 3057928156 or +57 3174025522</p>
               </div>
             </div>
             <div class="job-full-width">
@@ -186,8 +208,8 @@
         <section id="education">
           <h3><i class="fa-solid fa-graduation-cap"></i> EDUCATION</h3>
           <hr />
+          <h4>Formación académica</h4>
           <div class="education-container">
-            <!-- First Education Entry -->
             <div class="education-entry">
               <div class="education-column education-left">
                 <p><b>Systems Engineering</b></p>
@@ -195,87 +217,169 @@
               </div>
               <div class="education-column education-right">
                 <p><b>Universidad del Área Andina</b></p>
-                <p>(Completed). I stood out as the best in the class in software development.</p>
+                <p>Completed. Degree awarded on 28/07/2023.</p>
               </div>
             </div>
-
-            <!-- Second Education Entry -->
             <div class="education-entry">
               <div class="education-column education-left">
-                <p><b>Diploma in Software Development</b></p>
-                <p>2022 - 2023</p>
-              </div>
-              <div class="education-column education-right">
-                <p><b>Mintic</b></p>
-                <p>Python, Java, C#, Angular, Node.js, DevOps, Agile Methodologies, Unit Testing, Cloud Computing.</p>
-              </div>
-            </div>
-
-            <div class="education-entry">
-              <div class="education-column education-left">
-                <p><b>Diploma in Python y DevNet</b></p>
-                <p>2022 - 2022</p>
-              </div>
-              <div class="education-column education-right">
-                <p><b>Universidad del Área Andina, CISCO</b></p>
-                <p>Completed.</p>
-              </div>
-            </div>
-
-            <div class="education-entry">
-              <div class="education-column education-left">
-                <p><b>Diploma in IoT - Connecting Things</b></p>
-                <p>2022 - 2022</p>
-              </div>
-              <div class="education-column education-right">
-                <p><b>Universidad del Área Andina, CISCO</b></p>
-                <p>Developed an automated irrigation system using MicroPython with an ESP32 and various sensors.</p>
-              </div>
-            </div>
-
-            <div class="education-entry">
-              <div class="education-column education-left">
-                <p><b>Diploma in Java</b></p>
-                <p>2019 - 2022</p>
-              </div>
-              <div class="education-column education-right">
-                <p><b>Politécnico de Colombia University</b></p>
-                <p>Completed.</p>
-              </div>
-            </div>
-
-            <div class="education-entry">
-              <div class="education-column education-left">
-                <p><b>Technologist (ADSI)</b></p>
+                <p><b>Technologist in Analysis and Development of Information Systems (ADSI)</b></p>
                 <p>2016 - 2019</p>
               </div>
               <div class="education-column education-right">
-                <p><b>SENA, Centro de servicios financieros</b></p>
-                <p>Analysis and Development of Information Systems.</p>
+                <p><b>SENA, Centro de Servicios Financieros</b></p>
+                <p>Completed on 11/03/2019.</p>
               </div>
             </div>
-
             <div class="education-entry">
               <div class="education-column education-left">
-                <p><b>Java EE</b></p>
-                <p>2016 - 2019</p>
+                <p><b>Programming Skills for Web Applications - Misión TIC 2022</b></p>
+                <p>2022</p>
               </div>
               <div class="education-column education-right">
-                <p><b>Udemy, Virtual course</b></p>
-                <p>Security, Web Servicies, Spring MVC , SOAP, REST, EJB, JPA, JSP, JSF, JDBC Ajax, html/css, JavaScript, Ajax Json.</p>
+                <p><b>MinTIC / Universidad de Caldas</b></p>
+                <p>Diploma completed on 12/12/2022.</p>
               </div>
             </div>
-
             <div class="education-entry">
               <div class="education-column education-left">
-                <p><b>software quality</b></p>
-                <p>2017 - 2017</p>
+                <p><b>Web Application Development - Misión TIC 2022</b></p>
+                <p>2022</p>
               </div>
               <div class="education-column education-right">
-                <p><b>SENA, Virtual course</b></p>
-                <p>Software quality models.</p>
-                <p>Quality in software development.</p>
-                <p>Applying software quality in the development process.</p>
+                <p><b>MinTIC / Universidad de Caldas</b></p>
+                <p>Diploma completed on 12/12/2022.</p>
+              </div>
+            </div>
+            <div class="education-entry">
+              <div class="education-column education-left">
+                <p><b>Software Development - Misión TIC 2022</b></p>
+                <p>2022</p>
+              </div>
+              <div class="education-column education-right">
+                <p><b>MinTIC / Universidad de Caldas</b></p>
+                <p>Diploma completed on 09/11/2022.</p>
+              </div>
+            </div>
+            <div class="education-entry">
+              <div class="education-column education-left">
+                <p><b>Programming in Python and DevNet</b></p>
+                <p>2022</p>
+              </div>
+              <div class="education-column education-right">
+                <p><b>Universidad del Área Andina / Cisco</b></p>
+                <p>Diploma completed on 13/10/2022.</p>
+              </div>
+            </div>
+            <div class="education-entry">
+              <div class="education-column education-left">
+                <p><b>Basic Java Programming - Misión TIC 2022</b></p>
+                <p>2022</p>
+              </div>
+              <div class="education-column education-right">
+                <p><b>MinTIC / Universidad de Caldas</b></p>
+                <p>Diploma completed on 23/09/2022.</p>
+              </div>
+            </div>
+            <div class="education-entry">
+              <div class="education-column education-left">
+                <p><b>IoT Fundamentals: Connecting Things</b></p>
+                <p>2022</p>
+              </div>
+              <div class="education-column education-right">
+                <p><b>Cisco Networking Academy</b></p>
+                <p>Course completed on 25/07/2022.</p>
+              </div>
+            </div>
+            <div class="education-entry">
+              <div class="education-column education-left">
+                <p><b>Programming Fundamentals - Misión TIC 2022</b></p>
+                <p>2022</p>
+              </div>
+              <div class="education-column education-right">
+                <p><b>MinTIC / Universidad de Caldas</b></p>
+                <p>Diploma completed on 11/06/2022.</p>
+              </div>
+            </div>
+            <div class="education-entry">
+              <div class="education-column education-left">
+                <p><b>Software Quality</b></p>
+                <p>2017</p>
+              </div>
+              <div class="education-column education-right">
+                <p><b>SENA, Virtual Course</b></p>
+                <p>Software quality models and quality in the software development process.</p>
+              </div>
+            </div>
+            <div class="education-entry">
+              <div class="education-column education-left">
+                <p><b>High School Diploma (Bachiller Académico)</b></p>
+                <p>09/12/2009</p>
+              </div>
+              <div class="education-column education-right">
+                <p><b>Colegio Castilla, Bogotá D.C.</b></p>
+              </div>
+            </div>
+          </div>
+          <h4>Certificaciones</h4>
+          <div class="education-container">
+            <div class="education-entry">
+              <div class="education-column education-left">
+                <p><b>AI Development from Zero to Production</b></p>
+                <p>30/08/2026</p>
+              </div>
+              <div class="education-column education-right">
+                <p><b>BIG School</b></p>
+                <p>Certificate in AI development (6 hours).</p>
+              </div>
+            </div>
+            <div class="education-entry">
+              <div class="education-column education-left">
+                <p><b>Architecting on AWS</b></p>
+                <p>21/10/2024 - 25/10/2024</p>
+              </div>
+              <div class="education-column education-right">
+                <p><b>Fast Lane, AWS Training Partner</b></p>
+                <p>Course completion certificate (20 hours).</p>
+              </div>
+            </div>
+            <div class="education-entry">
+              <div class="education-column education-left">
+                <p><b>AWS Cloud Practitioner Essentials</b></p>
+                <p>18/10/2024</p>
+              </div>
+              <div class="education-column education-right">
+                <p><b>Fast Lane, AWS Training Partner</b></p>
+                <p>Course completion certificate (9 hours).</p>
+              </div>
+            </div>
+            <div class="education-entry">
+              <div class="education-column education-left">
+                <p><b>Google Cloud Fundamentals: Core Infrastructure</b></p>
+                <p>23/03/2023</p>
+              </div>
+              <div class="education-column education-right">
+                <p><b>Google Cloud / Fast Lane</b></p>
+                <p>Course completion certificate.</p>
+              </div>
+            </div>
+            <div class="education-entry">
+              <div class="education-column education-left">
+                <p><b>Preparing for the Associate Cloud Engineer Examination</b></p>
+                <p>03/03/2023</p>
+              </div>
+              <div class="education-column education-right">
+                <p><b>Google Cloud / Fast Lane</b></p>
+                <p>Course completion certificate.</p>
+              </div>
+            </div>
+            <div class="education-entry">
+              <div class="education-column education-left">
+                <p><b>English Communication Skills Certificate (B1)</b></p>
+                <p>20/04/2023</p>
+              </div>
+              <div class="education-column education-right">
+                <p><b>TECS - ILTO</b></p>
+                <p>Certificate code L199433.</p>
               </div>
             </div>
           </div>
@@ -288,10 +392,10 @@
             <!-- First Education Entry -->
             <div class="education-entry">
               <div class="education-column reference-left">
-                <p><b>David Leonardo Cubillos Jauregui</b></p>
-                <p>Systems Engineer, Senior Full Stack</p>
-                <p>+57 3167154281</p>
-                <p>dcfire696@gmail.com</p>
+                <p><b>William Garzon</b></p>
+                <p>Software Engineer</p>
+                <p>+57 3143111224</p>
+                <p>william.garzon@globant.com</p>
               </div>
               <div class="education-column reference-right">
                 <p><b>Alexander Londoño</b></p>
@@ -310,10 +414,10 @@
             <!-- First Education Entry -->
             <div class="education-entry">
               <div class="education-column reference-left">
-                <p><b>Brayan Alejandro Martínez</b></p>
-                <p>System Engineer Software Developer</p>
-                <p>+57 3204796677</p>
-                <p>alejandromardelg@gmail.com</p>
+                <p><b>Efrain Lopez Mazo</b></p>
+                <p>Software Engineer</p>
+                <p>+57 320 3579713</p>
+                <p>francog29@hotmail.com</p>
               </div>
               <div class="education-column reference-right">
                 <p><b>Angie Lizeth Araque Mora</b></p>
@@ -332,16 +436,16 @@
             <!-- First Education Entry -->
             <div class="education-entry">
               <div class="education-column reference-left">
-                <p><b>Rommel Santiago Vargas Pamplona</b></p>
-                <p>Physics and mathematics teacher</p>
-                <p>+57 3236959039</p>
-                <p>rudysan696@hotmail.com</p>
+                <p><b>Sergio Felipe Vargas Mora</b></p>
+                <p>Freelance Software AI Developer</p>
+                <p>+56 9 8268 4403</p>
+                <p>zayruxsara@hotmail.com</p>
               </div>
               <div class="education-column reference-right">
-                <p><b>Cristian David Quizá Pamplona</b></p>
-                <p>Software Developer.</p>
-                <p>+57 312507287</p>
-                <p>cristian.david_95@hotmail.com</p>
+                <p><b>Nardha Shelley Vargas</b></p>
+                <p>English Language Graduate</p>
+                <p>+57 321 555 4785</p>
+                <p>nardhas@hotmail.com</p>
               </div>
             </div>
           </div>
@@ -409,8 +513,11 @@
           <div class="section-container">
             <span>Proficency at a professional level</span>
             <div class="bar-separation">
-              <span>English</span>
+              <span>English B2</span>
               <canvas id="englishSkill" class="canvas-bars"></canvas>
+            </div>
+            <div class="bar-separation">
+              <span>Español (nativo)</span>
             </div>
           </div>
         </section>

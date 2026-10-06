@@ -2,23 +2,72 @@
 // Por ejemplo, cambiar dinámicamente tu email o mostrar más detalles al clickear
 
 // Funcionalidad para descargar el CV en PDF con calidad mejorada
-document.getElementById('download').addEventListener('click', () => {
+document.getElementById('download').addEventListener('click', async () => {
+  const cvContainer = document.getElementById('cv-container');
+
+  if (document.fonts && document.fonts.ready) {
+    await document.fonts.ready;
+  }
+
   var opt = {
-    margin:       0,
+    margin:       [0.15, 0.12, 0.15, 0.12],
     filename:     'Daniel_Felipe_Vargas_Pamplona_CV.pdf',
     image:        { type: 'jpeg', quality: 0.98 },
-    html2canvas:  { scale: 4, logging: true, useCORS: true }, // Aumenta la escala para mejorar la calidad
-    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+    html2canvas:  { scale: 2, logging: false, useCORS: true, scrollX: 0, scrollY: 0 },
+    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' },
+    pagebreak:    { mode: ['css', 'legacy'], before: '.page-break', avoid: ['.job-container', '.education-entry', '.bar-separation', '#familiReferences'] }
   };
 
-  // Usa las opciones definidas para generar el PDF
-  html2pdf().from(document.body).set(opt).save();
+  const exportStyleOverrides = [];
+  const setExportStyle = (element, property, value) => {
+    exportStyleOverrides.push({
+      element,
+      property,
+      previousValue: element.style.getPropertyValue(property),
+      previousPriority: element.style.getPropertyPriority(property)
+    });
+    element.style.setProperty(property, value, 'important');
+  };
+  const leftSide = cvContainer.querySelector('#left-side');
+  const rightSide = cvContainer.querySelector('#right-side');
+  cvContainer.classList.add('pdf-export');
+  setExportStyle(cvContainer, 'background-color', '#fff');
+  setExportStyle(leftSide, 'background-color', '#fff');
+  setExportStyle(rightSide, 'background-color', 'rgb(64, 64, 64)');
+  [leftSide, ...leftSide.querySelectorAll('*')].forEach(element => setExportStyle(element, 'color', '#000'));
+  [rightSide, ...rightSide.querySelectorAll('*')].forEach(element => setExportStyle(element, 'color', '#fff'));
+  rightSide.querySelectorAll('a').forEach(element => setExportStyle(element, 'color', '#4191e6'));
+  rightSide.querySelectorAll('hr').forEach(element => setExportStyle(element, 'background-color', '#fff'));
+  leftSide.querySelectorAll('hr, .timeline-container, .timeline-icon').forEach(element => setExportStyle(element, 'background-color', '#000'));
+  leftSide.querySelectorAll('svg, svg *').forEach(element => setExportStyle(element, 'fill', '#000'));
+  rightSide.querySelectorAll('svg, svg *').forEach(element => setExportStyle(element, 'fill', '#fff'));
+  const profilePicture = leftSide.querySelector('#profile-picture');
+  setExportStyle(profilePicture, 'background-color', '#000');
+  setExportStyle(profilePicture, 'border-color', '#f2f2f2');
+  setExportStyle(profilePicture, 'box-shadow', '0 0 0 1px #000');
+
+  try {
+    await html2pdf().from(cvContainer).set(opt).save();
+  } finally {
+    exportStyleOverrides.reverse().forEach(({ element, property, previousValue, previousPriority }) => {
+      if (previousValue) {
+        element.style.setProperty(property, previousValue, previousPriority);
+      } else {
+        element.style.removeProperty(property);
+      }
+    });
+    cvContainer.classList.remove('pdf-export');
+  }
 });
 
-let currentLanguage = 'en'; // Idioma predeterminado
+const initialLanguage = new URLSearchParams(window.location.search).get('lang');
+let currentLanguage = initialLanguage === 'es' ? 'es' : 'en'; // Idioma predeterminado
 
 function changeLanguage(lang) {
   currentLanguage = lang;
+  const url = new URL(window.location.href);
+  url.searchParams.set('lang', lang);
+  window.history.replaceState({}, '', url);
   loadContent();
 }
 
@@ -35,6 +84,14 @@ function loadContent() {
         : profileData.replace(/\n/g, '<br>');
       document.querySelector('#profile p').innerHTML = profileText;
       
+
+      // Cargar y mostrar la experiencia de trabajo de Amaris Consulting
+      let amarisConsultingArray = languageData.workExperience.amarisConsulting;
+      let amarisConsultingText = Array.isArray(amarisConsultingArray)
+        ? amarisConsultingArray.map(item => `● ${item}`).join('<br><br>')
+        : amarisConsultingArray.replace(/\n/g, '<br>').replace(/-/g, ' ● ');
+      document.querySelector('#jobAmarisConsulting').innerHTML = `<p>${amarisConsultingText}</p>`;
+
 
       // Cargar y mostrar la experiencia de trabajo de softwareOne
       let softwareOneArray = languageData.workExperience.softwareOne;
@@ -101,6 +158,17 @@ function displayCloudSkills(cloudSkillsTexts) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  const birthDate = new Date(1991, 8, 14);
+  const today = new Date();
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const birthdayHasPassed = today.getMonth() > birthDate.getMonth()
+    || (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
+
+  if (!birthdayHasPassed) {
+    age--;
+  }
+
+  document.querySelector('#age').textContent = age;
   loadContent();
   drawSkillBars();
 });
@@ -177,5 +245,3 @@ function drawSkillBars() {
   drawSkillBar('tests-skills', 50); // 90% para español
   drawSkillBar('repositorys-skills', 85); // 90% para español
 }
-
-

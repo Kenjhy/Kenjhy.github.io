@@ -6,6 +6,10 @@ body {
   background: #f2f2f2;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 #cv-container {
   display: flex;
   width: 100%;
@@ -13,6 +17,112 @@ body {
   padding: 0;
   background: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#cv-container.pdf-export {
+  width: 8.25in;
+  box-shadow: none;
+  align-items: stretch;
+}
+
+
+#cv-container.pdf-export button {
+  display: none;
+}
+
+#cv-container.pdf-export #left-side,
+#cv-container.pdf-export #right-side {
+  font-size: 10.5px;
+  line-height: 1.08;
+}
+
+#cv-container.pdf-export section {
+  margin-bottom: 10px;
+}
+
+#cv-container.pdf-export header {
+  margin-bottom: 8px;
+}
+
+#cv-container.pdf-export #profile-picture {
+  width: 130px;
+  height: 130px;
+}
+
+#cv-container.pdf-export .page-break {
+  page-break-before: always;
+  break-before: page;
+}
+
+#cv-container.pdf-export .job-entry,
+#cv-container.pdf-export .education-entry {
+  margin-bottom: 0;
+}
+
+#cv-container.pdf-export .job-column,
+#cv-container.pdf-export .education-column {
+  padding: 3px;
+}
+
+#cv-container.pdf-export .job-column p,
+#cv-container.pdf-export .education-column p,
+#cv-container.pdf-export #without-bar-container p,
+#cv-container.pdf-export #contact p {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+#cv-container.pdf-export .job-full-width {
+  margin-top: -8px;
+  padding: 0 3px;
+}
+
+#cv-container.pdf-export #Job .job-full-width p,
+#cv-container.pdf-export #profile p {
+  line-height: 1.08;
+}
+
+  #cv-container.pdf-export #contact p {
+    display: block;
+    line-height: 1.25;
+    word-break: break-word;
+  }
+
+  #cv-container.pdf-export #contact i {
+    display: none;
+  }
+
+#cv-container.pdf-export .section-container {
+  margin-top: 5px;
+}
+
+#cv-container.pdf-export .canvas-bars {
+  max-width: 84px;
+}
+
+#cv-container.pdf-export #right-side h3 {
+  margin-top: 8px;
+  margin-bottom: 3px;
+}
+
+#cv-container.pdf-export #clouds-skills-text p {
+  font-size: 10px;
+  line-height: 1.05;
+}
+
+#cv-container.pdf-export #signature {
+  display: none;
+}
+
+#cv-container.pdf-export .job-container,
+#cv-container.pdf-export .bar-separation {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+#cv-container.pdf-export #familiReferences {
+  break-inside: avoid;
+  page-break-inside: avoid;
 }
 
 #left-side, #right-side {
@@ -329,4 +439,121 @@ body {
       border-top: 1px solid black;
       margin: 0 auto 0px; /* Centra la línea y agrega un pequeño margen debajo de ella */
   }
+
+@page {
+  size: letter;
+  margin: 0.15in 0.12in;
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  #cv-container {
+    width: 8.25in;
+    box-shadow: none;
+    align-items: stretch;
+  }
+
+  #cv-container button {
+    display: none;
+  }
+
+  #left-side,
+  #right-side {
+    font-size: 10.5px;
+    line-height: 1.08;
+  }
+
+  section {
+    margin-bottom: 10px;
+  }
+
+  header {
+    margin-bottom: 8px;
+  }
+
+  #profile-picture {
+    width: 130px;
+    height: 130px;
+  }
+
+  .page-break {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  .job-entry,
+  .education-entry {
+    margin-bottom: 0;
+  }
+
+  .job-column,
+  .education-column {
+    padding: 3px;
+  }
+
+  .job-column p,
+  .education-column p,
+  #without-bar-container p,
+  #contact p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  .job-full-width {
+    margin-top: -8px;
+    padding: 0 3px;
+  }
+
+  #Job .job-full-width p,
+  #profile p {
+    line-height: 1.08;
+  }
+
+  #right-side #contact p {
+    display: block;
+    line-height: 1.25;
+    margin-bottom: 3px;
+    word-break: break-word;
+  }
+
+  #right-side #contact i {
+    display: none;
+  }
+
+  .section-container {
+    margin-top: 5px;
+  }
+
+  .canvas-bars {
+    max-width: 84px;
+  }
+
+  #right-side h3 {
+    margin-top: 8px;
+    margin-bottom: 3px;
+  }
+
+  #clouds-skills-text p {
+    font-size: 10px;
+    line-height: 1.05;
+  }
+
+  #signature {
+    display: none;
+  }
+
+  .job-container,
+  .bar-separation {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  #familiReferences {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
 
