@@ -31,6 +31,8 @@ La infromacion se encuentra en la misma cv Kenjhy.github.io\index.html o la pued
  y la referencia familiar Cambiar el nombre de cristian por Nardha Shelley Vargas Licenciada en idioma inglés con correo nardashe@hotmail.com Y el telefono +57 3215554785, 
  aprovechemos para cambiar tambien a Rommel Santiago Vargas Pamplona por Sergio Felipe Vargas Mora como Free lancer Software AI Developer, con el correo zayruxsara@hotmail.com y telefono +56982684403, 
  tambien cambiemos a Brayan Alejandro Martínez por  Efrain Lopez Mazo Como Ingeniero De Software con el correo francog29@hotmail.com y telefono +57 320 3579713.
+ tambien cambiar a David Leonardo Cubillos Jauregui por William Garzon, con profesion Ingeniero de Software, y correo william.garzon@globant.com y telefono +57 3143111224
+
 
 Nota:Si algun documento te pide contraseña puedes usar mi cedula que es 
 1022370888.

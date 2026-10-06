@@ -15,14 +15,47 @@ document.getElementById('download').addEventListener('click', async () => {
     image:        { type: 'jpeg', quality: 0.98 },
     html2canvas:  { scale: 2, logging: false, useCORS: true, scrollX: 0, scrollY: 0 },
     jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' },
-    pagebreak:    { mode: ['css', 'legacy'], avoid: ['.job-container', '.education-entry', '.bar-separation'] }
+    pagebreak:    { mode: ['css', 'legacy'], before: '.page-break', avoid: ['.job-container', '.education-entry', '.bar-separation', '#familiReferences'] }
   };
 
+  const exportStyleOverrides = [];
+  const setExportStyle = (element, property, value) => {
+    exportStyleOverrides.push({
+      element,
+      property,
+      previousValue: element.style.getPropertyValue(property),
+      previousPriority: element.style.getPropertyPriority(property)
+    });
+    element.style.setProperty(property, value, 'important');
+  };
+  const leftSide = cvContainer.querySelector('#left-side');
+  const rightSide = cvContainer.querySelector('#right-side');
   cvContainer.classList.add('pdf-export');
+  setExportStyle(cvContainer, 'background-color', '#fff');
+  setExportStyle(leftSide, 'background-color', '#fff');
+  setExportStyle(rightSide, 'background-color', 'rgb(64, 64, 64)');
+  [leftSide, ...leftSide.querySelectorAll('*')].forEach(element => setExportStyle(element, 'color', '#000'));
+  [rightSide, ...rightSide.querySelectorAll('*')].forEach(element => setExportStyle(element, 'color', '#fff'));
+  rightSide.querySelectorAll('a').forEach(element => setExportStyle(element, 'color', '#4191e6'));
+  rightSide.querySelectorAll('hr').forEach(element => setExportStyle(element, 'background-color', '#fff'));
+  leftSide.querySelectorAll('hr, .timeline-container, .timeline-icon').forEach(element => setExportStyle(element, 'background-color', '#000'));
+  leftSide.querySelectorAll('svg, svg *').forEach(element => setExportStyle(element, 'fill', '#000'));
+  rightSide.querySelectorAll('svg, svg *').forEach(element => setExportStyle(element, 'fill', '#fff'));
+  const profilePicture = leftSide.querySelector('#profile-picture');
+  setExportStyle(profilePicture, 'background-color', '#000');
+  setExportStyle(profilePicture, 'border-color', '#f2f2f2');
+  setExportStyle(profilePicture, 'box-shadow', '0 0 0 1px #000');
 
   try {
     await html2pdf().from(cvContainer).set(opt).save();
   } finally {
+    exportStyleOverrides.reverse().forEach(({ element, property, previousValue, previousPriority }) => {
+      if (previousValue) {
+        element.style.setProperty(property, previousValue, previousPriority);
+      } else {
+        element.style.removeProperty(property);
+      }
+    });
     cvContainer.classList.remove('pdf-export');
   }
 });
@@ -125,6 +158,17 @@ function displayCloudSkills(cloudSkillsTexts) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  const birthDate = new Date(1991, 8, 14);
+  const today = new Date();
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const birthdayHasPassed = today.getMonth() > birthDate.getMonth()
+    || (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
+
+  if (!birthdayHasPassed) {
+    age--;
+  }
+
+  document.querySelector('#age').textContent = age;
   loadContent();
   drawSkillBars();
 });

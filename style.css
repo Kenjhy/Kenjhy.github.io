@@ -22,8 +22,9 @@ body {
 #cv-container.pdf-export {
   width: 8.25in;
   box-shadow: none;
-  align-items: flex-start;
+  align-items: stretch;
 }
+
 
 #cv-container.pdf-export button {
   display: none;
@@ -49,8 +50,8 @@ body {
 }
 
 #cv-container.pdf-export .page-break {
-  page-break-before: auto;
-  break-before: auto;
+  page-break-before: always;
+  break-before: page;
 }
 
 #cv-container.pdf-export .job-entry,
@@ -115,6 +116,11 @@ body {
 
 #cv-container.pdf-export .job-container,
 #cv-container.pdf-export .bar-separation {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+#cv-container.pdf-export #familiReferences {
   break-inside: avoid;
   page-break-inside: avoid;
 }
@@ -447,7 +453,7 @@ body {
   #cv-container {
     width: 8.25in;
     box-shadow: none;
-    align-items: flex-start;
+    align-items: stretch;
   }
 
   #cv-container button {
@@ -474,8 +480,8 @@ body {
   }
 
   .page-break {
-    page-break-before: auto;
-    break-before: auto;
+    page-break-before: always;
+    break-before: page;
   }
 
   .job-entry,
@@ -541,6 +547,11 @@ body {
 
   .job-container,
   .bar-separation {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  #familiReferences {
     break-inside: avoid;
     page-break-inside: avoid;
   }
